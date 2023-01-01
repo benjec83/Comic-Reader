@@ -1,5 +1,5 @@
 //
-//  SheetViewController.swift
+//  BookSheetViewController.swift.swift
 //  Comic Reader
 //
 //  Created by Ben Carney on 1/1/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct SheetViewController: View {
+struct BookSheetViewController: View {
     var book: Book
     @State private var showingSheet = false
     
@@ -24,17 +24,19 @@ struct SheetViewController: View {
                     }
                     
                 }
- 
+
                 .sheet(isPresented: $showingSheet) {
-                    BookSheetView(book: book)
+                    NavigationView {
+                        BookSheetView(book: book)
+                    }
                 }
         }
     }
     
 }
 
-struct SheetViewController_Previews: PreviewProvider {
+struct BookSheetViewController_Previews: PreviewProvider {
     static var previews: some View {
-        SheetViewController(book: books[1])
+        BookSheetViewController(book: books[1])
     }
 }

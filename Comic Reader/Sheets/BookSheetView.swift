@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BookSheetView: View {
+    @State var isModalSheetShown: Bool = false
+
     var book: Book
     @Environment(\.dismiss) var dismiss
     
@@ -35,7 +37,7 @@ struct BookSheetView: View {
             Text("Library")
         }
                 .toolbar {
-                    ToolbarItemGroup(placement: .navigation) {
+                    ToolbarItemGroup(placement: .automatic) {
                         
                         navigationTitle("Title")
                         Button {
@@ -46,6 +48,15 @@ struct BookSheetView: View {
                     }
                 }
         }
+        .navigationTitle("#" + book.issue + " - " + (book.title ?? book.series))
+        .navigationBarTitleDisplayMode(.inline)
+                    .navigationBarItems(trailing:
+                                            HStack {
+                        Button(action: { self.isModalSheetShown = true}){
+                            Text("Edit")
+                        }
+                    })
+        
 //        NavigationStack {
 //            ScrollView {
 //                VStack {

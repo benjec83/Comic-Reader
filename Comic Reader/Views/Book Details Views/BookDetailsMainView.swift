@@ -172,8 +172,6 @@ struct BookDetailsMainView: View {
                         }
                     }
                     .frame(height: 250)
-                    
-                    
                 }
                 .padding(.all)
                 .frame(width: 360)
@@ -192,7 +190,6 @@ struct BookDetailsMainView: View {
             .padding(.horizontal)
             .frame(maxWidth: 690)
         }
-        
     }
 }
 

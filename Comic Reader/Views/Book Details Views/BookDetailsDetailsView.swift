@@ -8,10 +8,12 @@
 import SwiftUI
 
 struct BookDetailsDetailsView: View {
+
     var body: some View {
-        HStack {
+        VStack {
             Text("Book Details")
         }
+ 
     }
 }
 

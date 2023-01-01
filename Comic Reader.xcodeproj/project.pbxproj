@@ -13,7 +13,7 @@
 		ED112036295FED7F0065672A /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED112035295FED7F0065672A /* PeopleModel.swift */; };
 		ED2C9ACA2961DB21006027C1 /* Textbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C9AC92961DB21006027C1 /* Textbox.swift */; };
 		ED2C9ACD2961DC15006027C1 /* BookSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C9ACC2961DC15006027C1 /* BookSheetView.swift */; };
-		ED2C9AD02961DF65006027C1 /* SheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C9ACF2961DF65006027C1 /* SheetViewController.swift */; };
+		ED2C9AD02961DF65006027C1 /* BookSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C9ACF2961DF65006027C1 /* BookSheetViewController.swift */; };
 		EDA04649295EAED2006291E8 /* libraryData.json in Resources */ = {isa = PBXBuildFile; fileRef = EDA04648295EAED2006291E8 /* libraryData.json */; };
 		EDA0464B295EAF3F006291E8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0464A295EAF3F006291E8 /* ModelData.swift */; };
 		EDA0464E295EB247006291E8 /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0464D295EB247006291E8 /* BookRow.swift */; };
@@ -43,7 +43,7 @@
 		ED112035295FED7F0065672A /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
 		ED2C9AC92961DB21006027C1 /* Textbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textbox.swift; sourceTree = "<group>"; };
 		ED2C9ACC2961DC15006027C1 /* BookSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSheetView.swift; sourceTree = "<group>"; };
-		ED2C9ACF2961DF65006027C1 /* SheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SheetViewController.swift; sourceTree = "<group>"; };
+		ED2C9ACF2961DF65006027C1 /* BookSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSheetViewController.swift; sourceTree = "<group>"; };
 		EDA04648295EAED2006291E8 /* libraryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = libraryData.json; sourceTree = "<group>"; };
 		EDA0464A295EAF3F006291E8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		EDA0464D295EB247006291E8 /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		ED2C9ACE2961DF56006027C1 /* Sheet View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				ED2C9ACF2961DF65006027C1 /* SheetViewController.swift */,
+				ED2C9ACF2961DF65006027C1 /* BookSheetViewController.swift */,
 			);
 			path = "Sheet View Controllers";
 			sourceTree = "<group>";
@@ -275,7 +275,7 @@
 			files = (
 				ED2C9ACA2961DB21006027C1 /* Textbox.swift in Sources */,
 				EDA04667295FC1FE006291E8 /* BookDetailsMainView.swift in Sources */,
-				ED2C9AD02961DF65006027C1 /* SheetViewController.swift in Sources */,
+				ED2C9AD02961DF65006027C1 /* BookSheetViewController.swift in Sources */,
 				EDA04659295F4878006291E8 /* BookList.swift in Sources */,
 				ED112032295FE66A0065672A /* BookDetailsLibraryView.swift in Sources */,
 				EDC90D45295E77D100E2339E /* ContentView.swift in Sources */,

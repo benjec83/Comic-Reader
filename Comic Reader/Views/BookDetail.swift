@@ -35,12 +35,7 @@ struct BookDetail: View {
         }
             
         }
-        
-
-        
     }
-    
-
 }
 
 

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct BookDetailsLibraryView: View {
     var body: some View {
-        HStack {
+        VStack {
             Text("Library")
         }
     }
