@@ -15,7 +15,7 @@ struct BookDetail: View {
         TabView {
             BookDetailsMainView(book: book)
                 .tabItem {
-                    Image(systemName: "Eye.fill")
+                    Image(systemName: "eye.fill")
                     Text("Overview")
                 }
             BookDetailsCreativesView()
@@ -35,6 +35,7 @@ struct BookDetail: View {
         }
             
         }
+        
 
         
     }
