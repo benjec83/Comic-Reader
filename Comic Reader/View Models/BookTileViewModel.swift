@@ -14,11 +14,16 @@ struct BookTileViewModel: View {
     var body: some View {
 
             VStack(alignment: .leading) {
-                book.image
-//                    .frame(width: 180.0)
-//                    .scaledToFit()
-                    .resizable(capInsets: EdgeInsets(top: 1.0, leading: 1.0, bottom: 1.0, trailing: 1.0))
-                    .shadow(radius: 1)
+                HStack(alignment: .center) {
+                    book.image
+    //                    .frame(height: 266)
+    //                    .scaledToFit()
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .shadow(radius: 1)
+                }
+                .frame(height: 266)
+                
                 VStack(alignment: .leading) {
                     
                     Text("#" + book.issue + " - " + (book.title ?? ""))
@@ -28,10 +33,14 @@ struct BookTileViewModel: View {
                     Text(book.series + " (" + book.volume + ")")
                         .font(.caption2)
                         .lineLimit(1)
+                    Spacer()
+                    
                 }
             }
             .frame(width: 180, height: 345)
             .padding()
+            .scaledToFit()
+
         }    
 }
 

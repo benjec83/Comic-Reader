@@ -14,25 +14,27 @@
 		ED2C9ACA2961DB21006027C1 /* Textbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C9AC92961DB21006027C1 /* Textbox.swift */; };
 		ED2C9ACD2961DC15006027C1 /* BookSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C9ACC2961DC15006027C1 /* BookSheetView.swift */; };
 		ED2C9AD02961DF65006027C1 /* BookSheetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C9ACF2961DF65006027C1 /* BookSheetViewController.swift */; };
+		ED4ACFF12962385600B91DED /* Testing.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4ACFF02962385600B91DED /* Testing.swift */; };
 		EDA04649295EAED2006291E8 /* libraryData.json in Resources */ = {isa = PBXBuildFile; fileRef = EDA04648295EAED2006291E8 /* libraryData.json */; };
 		EDA0464B295EAF3F006291E8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0464A295EAF3F006291E8 /* ModelData.swift */; };
 		EDA0464E295EB247006291E8 /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0464D295EB247006291E8 /* BookRow.swift */; };
-		EDA04651295EB927006291E8 /* SidebarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA04650295EB927006291E8 /* SidebarViewController.swift */; };
-		EDA04653295EB937006291E8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA04652295EB937006291E8 /* HomeViewController.swift */; };
-		EDA04655295EB940006291E8 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA04654295EB940006291E8 /* LibraryViewController.swift */; };
-		EDA04657295EB94D006291E8 /* ReadingListsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA04656295EB94D006291E8 /* ReadingListsViewController.swift */; };
+		EDA04651295EB927006291E8 /* SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA04650295EB927006291E8 /* SidebarView.swift */; };
 		EDA04659295F4878006291E8 /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA04658295F4878006291E8 /* BookList.swift */; };
 		EDA0465B295F4AF3006291E8 /* BookDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0465A295F4AF2006291E8 /* BookDetail.swift */; };
 		EDA0465D295F6552006291E8 /* PublisherLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0465C295F6552006291E8 /* PublisherLogo.swift */; };
 		EDA04663295FC09F006291E8 /* BookDetailsCreativesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA04662295FC09F006291E8 /* BookDetailsCreativesView.swift */; };
 		EDA04667295FC1FE006291E8 /* BookDetailsMainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA04666295FC1FE006291E8 /* BookDetailsMainView.swift */; };
 		EDA0466D295FC631006291E8 /* BookDetailBackUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0466C295FC631006291E8 /* BookDetailBackUp.swift */; };
+		EDA669B829621F3E0069176E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA669B729621F3E0069176E /* HomeView.swift */; };
+		EDA669BA29621F610069176E /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA669B929621F610069176E /* LibraryView.swift */; };
+		EDA669BC29621F6B0069176E /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA669BB29621F6B0069176E /* SearchView.swift */; };
+		EDA669BE29621F750069176E /* ReadingListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA669BD29621F750069176E /* ReadingListsView.swift */; };
 		EDC90D43295E77D100E2339E /* Comic_ReaderApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC90D42295E77D100E2339E /* Comic_ReaderApp.swift */; };
 		EDC90D45295E77D100E2339E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC90D44295E77D100E2339E /* ContentView.swift */; };
 		EDC90D47295E77D300E2339E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC90D46295E77D300E2339E /* Assets.xcassets */; };
 		EDC90D4A295E77D300E2339E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC90D49295E77D300E2339E /* Preview Assets.xcassets */; };
 		EDC90D51295E9B6100E2339E /* CoverImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC90D50295E9B6100E2339E /* CoverImage.swift */; };
-		EDC90D55295EA8C600E2339E /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC90D54295EA8C600E2339E /* BookModel.swift */; };
+		EDC90D55295EA8C600E2339E /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC90D54295EA8C600E2339E /* Book.swift */; };
 		EDC90D5C295EAC5900E2339E /* BookTileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDC90D5B295EAC5900E2339E /* BookTileViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,19 +46,21 @@
 		ED2C9AC92961DB21006027C1 /* Textbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Textbox.swift; sourceTree = "<group>"; };
 		ED2C9ACC2961DC15006027C1 /* BookSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSheetView.swift; sourceTree = "<group>"; };
 		ED2C9ACF2961DF65006027C1 /* BookSheetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSheetViewController.swift; sourceTree = "<group>"; };
+		ED4ACFF02962385600B91DED /* Testing.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Testing.swift; sourceTree = "<group>"; };
 		EDA04648295EAED2006291E8 /* libraryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = libraryData.json; sourceTree = "<group>"; };
 		EDA0464A295EAF3F006291E8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		EDA0464D295EB247006291E8 /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
-		EDA04650295EB927006291E8 /* SidebarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarViewController.swift; sourceTree = "<group>"; };
-		EDA04652295EB937006291E8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		EDA04654295EB940006291E8 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
-		EDA04656295EB94D006291E8 /* ReadingListsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListsViewController.swift; sourceTree = "<group>"; };
+		EDA04650295EB927006291E8 /* SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SidebarView.swift; sourceTree = "<group>"; };
 		EDA04658295F4878006291E8 /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
 		EDA0465A295F4AF2006291E8 /* BookDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetail.swift; sourceTree = "<group>"; };
 		EDA0465C295F6552006291E8 /* PublisherLogo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublisherLogo.swift; sourceTree = "<group>"; };
 		EDA04662295FC09F006291E8 /* BookDetailsCreativesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsCreativesView.swift; sourceTree = "<group>"; };
 		EDA04666295FC1FE006291E8 /* BookDetailsMainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsMainView.swift; sourceTree = "<group>"; };
 		EDA0466C295FC631006291E8 /* BookDetailBackUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetailBackUp.swift; sourceTree = "<group>"; };
+		EDA669B729621F3E0069176E /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		EDA669B929621F610069176E /* LibraryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		EDA669BB29621F6B0069176E /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		EDA669BD29621F750069176E /* ReadingListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingListsView.swift; sourceTree = "<group>"; };
 		EDB600DA295EAE2C00215057 /* Directions.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = Directions.geojson; sourceTree = "<group>"; };
 		EDC90D3F295E77D100E2339E /* Comic Reader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Comic Reader.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDC90D42295E77D100E2339E /* Comic_ReaderApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comic_ReaderApp.swift; sourceTree = "<group>"; };
@@ -64,7 +68,7 @@
 		EDC90D46295E77D300E2339E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDC90D49295E77D300E2339E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		EDC90D50295E9B6100E2339E /* CoverImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoverImage.swift; sourceTree = "<group>"; };
-		EDC90D54295EA8C600E2339E /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
+		EDC90D54295EA8C600E2339E /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		EDC90D5B295EAC5900E2339E /* BookTileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTileViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +115,7 @@
 			children = (
 				EDA0464D295EB247006291E8 /* BookRow.swift */,
 				EDA04658295F4878006291E8 /* BookList.swift */,
+				ED4ACFF02962385600B91DED /* Testing.swift */,
 				EDA0465A295F4AF2006291E8 /* BookDetail.swift */,
 				EDA0466C295FC631006291E8 /* BookDetailBackUp.swift */,
 				ED112030295FE6560065672A /* Book Details Views */,
@@ -122,10 +127,11 @@
 		EDA0464F295EB8C4006291E8 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EDA04650295EB927006291E8 /* SidebarViewController.swift */,
-				EDA04652295EB937006291E8 /* HomeViewController.swift */,
-				EDA04654295EB940006291E8 /* LibraryViewController.swift */,
-				EDA04656295EB94D006291E8 /* ReadingListsViewController.swift */,
+				EDA04650295EB927006291E8 /* SidebarView.swift */,
+				EDA669B729621F3E0069176E /* HomeView.swift */,
+				EDA669BB29621F6B0069176E /* SearchView.swift */,
+				EDA669B929621F610069176E /* LibraryView.swift */,
+				EDA669BD29621F750069176E /* ReadingListsView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -185,7 +191,7 @@
 			children = (
 				EDC90D50295E9B6100E2339E /* CoverImage.swift */,
 				EDA0465C295F6552006291E8 /* PublisherLogo.swift */,
-				EDC90D54295EA8C600E2339E /* BookModel.swift */,
+				EDC90D54295EA8C600E2339E /* Book.swift */,
 				EDA0464A295EAF3F006291E8 /* ModelData.swift */,
 				ED112033295FE8420065672A /* CreativesModel.swift */,
 				ED112035295FED7F0065672A /* PeopleModel.swift */,
@@ -274,29 +280,31 @@
 			buildActionMask = 2147483647;
 			files = (
 				ED2C9ACA2961DB21006027C1 /* Textbox.swift in Sources */,
+				EDA669BE29621F750069176E /* ReadingListsView.swift in Sources */,
 				EDA04667295FC1FE006291E8 /* BookDetailsMainView.swift in Sources */,
 				ED2C9AD02961DF65006027C1 /* BookSheetViewController.swift in Sources */,
+				EDA669B829621F3E0069176E /* HomeView.swift in Sources */,
 				EDA04659295F4878006291E8 /* BookList.swift in Sources */,
 				ED112032295FE66A0065672A /* BookDetailsLibraryView.swift in Sources */,
 				EDC90D45295E77D100E2339E /* ContentView.swift in Sources */,
 				EDC90D43295E77D100E2339E /* Comic_ReaderApp.swift in Sources */,
-				EDC90D55295EA8C600E2339E /* BookModel.swift in Sources */,
-				EDA04657295EB94D006291E8 /* ReadingListsViewController.swift in Sources */,
+				EDC90D55295EA8C600E2339E /* Book.swift in Sources */,
 				EDA0465D295F6552006291E8 /* PublisherLogo.swift in Sources */,
 				ED11202F295FE6410065672A /* BookDetailsDetailsView.swift in Sources */,
 				EDC90D51295E9B6100E2339E /* CoverImage.swift in Sources */,
 				EDA0464E295EB247006291E8 /* BookRow.swift in Sources */,
 				EDA0465B295F4AF3006291E8 /* BookDetail.swift in Sources */,
-				EDA04653295EB937006291E8 /* HomeViewController.swift in Sources */,
-				EDA04655295EB940006291E8 /* LibraryViewController.swift in Sources */,
 				ED112034295FE8420065672A /* CreativesModel.swift in Sources */,
+				EDA669BA29621F610069176E /* LibraryView.swift in Sources */,
+				EDA669BC29621F6B0069176E /* SearchView.swift in Sources */,
 				EDC90D5C295EAC5900E2339E /* BookTileViewModel.swift in Sources */,
 				EDA0464B295EAF3F006291E8 /* ModelData.swift in Sources */,
 				ED112036295FED7F0065672A /* PeopleModel.swift in Sources */,
 				EDA04663295FC09F006291E8 /* BookDetailsCreativesView.swift in Sources */,
+				ED4ACFF12962385600B91DED /* Testing.swift in Sources */,
 				EDA0466D295FC631006291E8 /* BookDetailBackUp.swift in Sources */,
 				ED2C9ACD2961DC15006027C1 /* BookSheetView.swift in Sources */,
-				EDA04651295EB927006291E8 /* SidebarViewController.swift in Sources */,
+				EDA04651295EB927006291E8 /* SidebarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +429,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"ASSETCATALOG_COMPILER_APPICON_NAME[sdk=iphoneos*]" = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Comic Reader/Preview Content\"";
@@ -451,6 +461,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Comic Reader/Preview Content\"";

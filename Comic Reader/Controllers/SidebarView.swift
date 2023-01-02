@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  SidebarView.swift
 //  Comic Reader
 //
 //  Created by Ben Carney on 12/29/22.
@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct SidebarView: View {
+    var book: Book
+    
     var body: some View {
         NavigationView {
             List {
@@ -46,12 +48,8 @@ struct ContentView: View {
     }
 }
 
-
-struct ContentView_Previews: PreviewProvider {
+struct SidebarView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
-        //            .preferredColorScheme(.dark)
-        
+        SidebarView(book: books[1])
     }
 }
-

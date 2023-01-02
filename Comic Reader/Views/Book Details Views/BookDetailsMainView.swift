@@ -14,7 +14,7 @@ struct BookDetailsMainView: View {
         
         ScrollView {
             HStack {
-                HStack {
+                HStack(alignment: .center) {
                     CoverImage(image: book.image)
                         .scaledToFit()
                     //                        .frame(height: 390.0)
@@ -158,13 +158,30 @@ struct BookDetailsMainView: View {
                             VStack{
                                 Text("Personal Rating")
                                     .font(.caption)
-                                Text("􀋂􀋂􀋂􀋂􀋂")
+                                    .multilineTextAlignment(.center)
+                                    .lineLimit(1)
+                                HStack(spacing: -1.0) {
+                                    Image(systemName: "star")
+                                    Image(systemName: "star")
+                                    Image(systemName: "star")
+                                    Image(systemName: "star")
+                                    Image(systemName: "star")
+                                }
                             }
                             Spacer()
                             VStack {
                                 Text("Community Rating")
                                     .font(.caption)
-                                Text("􀋂􀋂􀋂􀋂􀋂")
+                                    .multilineTextAlignment(.center)
+                                    .lineLimit(1)
+                                HStack(spacing: -1.0) {
+                                    Image(systemName: "star")
+                                    Image(systemName: "star")
+                                    Image(systemName: "star")
+                                    Image(systemName: "star")
+                                    Image(systemName: "star")
+                                }
+                                
                             }
                             Spacer()
                             Image(systemName: "ellipsis.circle.fill")
@@ -174,7 +191,7 @@ struct BookDetailsMainView: View {
                     .frame(height: 250)
                 }
                 .padding(.all)
-                .frame(width: 360)
+                .frame(width: 380)
             }
             .padding(.top)
             .frame(width: 710)
