@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct BookSheetView: View {
+    @State private var showingSheet = false
+
     @State var isModalSheetShown: Bool = false
 
     var book: Book
@@ -21,21 +23,21 @@ struct BookSheetView: View {
                     Image(systemName: "eye.fill")
                     Text("Overview")
                 }
-            BookDetailsCreativesView()
+            BookDetailsCreativesView(book: book)
                 .tabItem {
                     Image(systemName: "photo.artframe")
                     Text("Creative Team")
                 }
-            BookDetailsDetailsView()
+            BookDetailsDetailsView(book: book)
                 .tabItem {
                     Image(systemName: "star")
                     Text("Details")
                 }
-            BookDetailsLibraryView()
+            BookDetailsLibraryView(book: book)
                 .tabItem {
             Image(systemName: "star")
             Text("Library")
-        }
+                }
                 .toolbar {
                     ToolbarItemGroup(placement: .automatic) {
                         
@@ -50,35 +52,11 @@ struct BookSheetView: View {
         }
         .navigationTitle("#" + book.issue + " - " + (book.title ?? book.series))
         .navigationBarTitleDisplayMode(.inline)
-                    .navigationBarItems(trailing:
-                                            HStack {
-                        Button(action: { self.isModalSheetShown = true}){
-                            Text("Edit")
-                        }
-                    })
-        
-//        NavigationStack {
-//            ScrollView {
-//                VStack {
-//                    Text("Line 1")
-//                        .font(.largeTitle)
-//                    Text("Line 2")
-//                        .font(.title)
-//                    HStack {
-//                        Image("8712277-superman-son-of-kal-el-17")
-//                            .resizable()
-//                            .aspectRatio(contentMode: .fit)
-//                    }
-//
-//                }
-//                .frame(maxWidth: 900)
-//
-//            .navigationTitle("This is the Title")
-//            }
-//
-//
-//        }
-        
+        .navigationBarItems(trailing:
+                                Button{} label: {
+                Label("More", systemImage: "ellipsis.circle")
+            }
+        )
     }
 }
 

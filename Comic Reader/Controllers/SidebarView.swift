@@ -11,7 +11,7 @@ struct SidebarView: View {
     var book: Book
     
     var body: some View {
-        NavigationView {
+        NavigationStack {
             List {
                 NavigationLink(destination: HomeView()) {
                     Label("Home", systemImage: "book")

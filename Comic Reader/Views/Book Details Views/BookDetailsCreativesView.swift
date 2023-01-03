@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct BookDetailsCreativesView: View {
+    var book: Book
+    
     var body: some View {
         VStack {
-            Text("Creative View")
+            Text(book.title ?? "")
         }
     }
 }
 
 struct BookDetailsCreativesView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailsCreativesView()
+        BookDetailsCreativesView(book: books[1])
     }
 }

@@ -10,6 +10,7 @@ import SwiftUI
 struct ReadingListsView: View {
     var body: some View {
         Text("Reading List View")
+            .navigationTitle("Reading Lists")
     }
 }
 

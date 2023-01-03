@@ -27,22 +27,19 @@ struct BookDetailsMainView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             // Main Book Details
-                            HStack {
                                 Text("#" + book.issue + " - " + (book.title ?? ""))
                                     .font(.subheadline)
                                     .fontWeight(.semibold)
                                     .lineLimit(2)
-                            }
-                            HStack {
                                 Text(book.series + " (" + book.volume + ")")
                                     .font(.caption2)
                                     .lineLimit(2)
-                            }
                             Text("Story Arc: " + (book.storyArc ?? ""))
                                 .font(.caption2)
                                 .lineLimit(1)
                             
                         }
+                        .multilineTextAlignment(.leading)
                         Spacer()
                     }
                     .frame(width: 360)
@@ -105,6 +102,7 @@ struct BookDetailsMainView: View {
                     .frame(height: 65)
                     Divider()
                     VStack {
+                        Spacer()
                         HStack {
                             Image(systemName: "magazine")
                                 .accessibilityLabel("Read Now")
@@ -118,9 +116,6 @@ struct BookDetailsMainView: View {
                         .cornerRadius(51.0)
                         .foregroundColor(.white)
                         .font(.headline)
-                        
-                        //                        Spacer()
-                        //                            .frame(height: 20)
                         
                         HStack {
                             Image(systemName: "checkmark.circle")
@@ -136,9 +131,6 @@ struct BookDetailsMainView: View {
                         .foregroundColor(.white)
                         .font(.headline)
                         
-                        //                        Spacer()
-                        //                            .frame(height: 20)
-                        
                         HStack {
                             Image(systemName: "square.stack.3d.up")
                                 .accessibilityLabel("Add to Read Pile")
@@ -153,8 +145,10 @@ struct BookDetailsMainView: View {
                         
                         .foregroundColor(.white)
                         .font(.headline)
+                        Spacer()
                         HStack {
-                            //Ratings & Action Button
+                            Spacer()
+                            //Ratings
                             VStack{
                                 Text("Personal Rating")
                                     .font(.caption)
@@ -184,8 +178,6 @@ struct BookDetailsMainView: View {
                                 
                             }
                             Spacer()
-                            Image(systemName: "ellipsis.circle.fill")
-                                .accessibilityLabel("More Actions")
                         }
                     }
                     .frame(height: 250)

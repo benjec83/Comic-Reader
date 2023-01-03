@@ -61,5 +61,35 @@
         "imageName": "2811995-screen_shot_2013_01_15_at_10.04.41_am",
         "publisherLogo": "DC_Comics_logo",
         "description": "The Man of Steel's at a happy point in his life--he's got some good news to share with Batman. But tragic times are just around the corner, as one of Batman's deadliest foes is in Metropolis on a surprise visit!"
+    },
+{    "series": "Nightwing",
+    "title": "Leaping Into the Light Part 2",
+    "storyArc": "Leaping Into the Light",
+    "volume": "2016",
+    "id": 1007,
+    "issue": "79",
+    "imageName": "nightwing79",
+    "publisherLogo": "DC_Comics_logo",
+    "description": "Dick Grayson has inherited Alfred’s fortune, a puppy, and a whole lot of questions. Who is Mayor Zucco, and what is her relation to the man who murdered Dick’s parents? What sinister plans does Blockbuster have for Blüdhaven? What kind of dog food is best for a three-legged puppy? To answer these questions, Dick’s going to need a little help from his friends-past and present."
+    },
+{    "series": "Action Comics",
+    "title": "Invisible Mafia Part 6",
+    "storyArc": "Invisible Mafia",
+    "volume": "2016",
+    "id": 1008,
+    "issue": "1006",
+    "imageName": "actionComics1006",
+    "publisherLogo": "DC_Comics_logo",
+    "description": "The Red Cloud sets her sights on someone close to Superman, but how can the Man of Steel stop a villain he can’t touch? As the invisible mafia controlling Metropolis’ underworld steps more into the light, its leader finally stands revealed with a secret that will have massive implications for Superman and Clark Kent!"
+    },
+{    "series": "We Are Robin",
+    "title": "We Are... Robin, Part One",
+    "storyArc": "We Are Robin",
+    "volume": "2015",
+    "id": 1009,
+    "issue": "1",
+    "imageName": "weAreRobin01",
+    "publisherLogo": "DC_Comics_logo",
+    "description": ""
     }
 ]
