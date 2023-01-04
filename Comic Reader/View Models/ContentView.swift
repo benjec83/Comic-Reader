@@ -18,7 +18,7 @@ struct ContentView: View {
                     Label("Search", systemImage: "magnifyingglass")
                 }
                 Section("Library", content: {
-                    NavigationLink(destination: LibraryView(book: books[1])) {
+                    NavigationLink(destination: LibraryView(book: books[1], books: books)) {
                         Label("All Books", systemImage: "books.vertical")
                     }
                     Label("Reading Pile", systemImage: "square.stack.3d.up")

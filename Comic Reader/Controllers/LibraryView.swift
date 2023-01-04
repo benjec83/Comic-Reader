@@ -25,6 +25,9 @@ struct LibraryView: View {
     }
 
     let book: Book
+    let books: [Book]
+    
+    @State private var selected: Book? = nil
     
     let spacing: CGFloat = 10
     
@@ -36,24 +39,22 @@ struct LibraryView: View {
         Text("Content")
             .multilineTextAlignment(.leading)
             .navigationTitle("Library")
-
-        
         
         ScrollView {
 
             LazyVGrid(columns: gridItems,
                       spacing: spacing
             )
-            { ForEach(filteredBooks, id: \.self) { book in
+            { ForEach(filteredBooks, id: \.self) { item in
                 
-//                Button {
-//                    showingSheet = true
-//                } label: {
-//                    BookTileModel(book: book)
-//                }
+                Button {
+                    selected = item
+                } label: {
+                    BookTileModel(book: item)
+                }
                 
-                                NavigationLink(destination: BookSheetView(book:book),
-                                               label: {BookTileModel(book: book)})
+//                                NavigationLink(destination: BookSheetView(book:book),
+//                                               label: {BookTileModel(book: book)})
                 
             }
             }
@@ -62,8 +63,8 @@ struct LibraryView: View {
 
         }
         //  Start of sheet
-        .sheet(isPresented: $showingSheet) {
-            BookSheetView(book: book)
+        .sheet(item: $selected) { item in
+            BookSheetView(book: item)
         }
         // End of sheet
     }
