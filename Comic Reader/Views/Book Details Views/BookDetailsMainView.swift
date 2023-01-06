@@ -27,13 +27,13 @@ struct BookDetailsMainView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             // Main Book Details
-                                Text("#" + book.issue + " - " + (book.title ?? ""))
-                                    .font(.subheadline)
-                                    .fontWeight(.semibold)
-                                    .lineLimit(2)
-                                Text(book.series + " (" + book.volume + ")")
-                                    .font(.caption2)
-                                    .lineLimit(2)
+                            Text("#" + book.issue + " - " + (book.title ?? ""))
+                                .font(.subheadline)
+                                .fontWeight(.semibold)
+                                .lineLimit(2)
+                            Text(book.series + " (" + book.volume + ")")
+                                .font(.caption2)
+                                .lineLimit(2)
                             Text("Story Arc: " + (book.storyArc ?? ""))
                                 .font(.caption2)
                                 .lineLimit(1)
@@ -104,11 +104,18 @@ struct BookDetailsMainView: View {
                     VStack {
                         Spacer()
                         HStack {
-                            Image(systemName: "magazine")
-                                .accessibilityLabel("Read Now")
-                            Button("Read Now") {
-                                
+                            Button {
+                                print("Read Now pressed")
+                            } label: {
+                                Label("Read Now", systemImage: "magazine")
                             }
+                            .frame(width: 345.0, height: 55.0)
+                            .accessibilityAddTraits([.isButton])
+                            .accessibilityLabel("Read Now")
+                            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                            .cornerRadius(/*@START_MENU_TOKEN@*/51.0/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
                         }
                         .frame(width: 345.0, height: 55)
                         .background(Color.blue)
@@ -118,26 +125,36 @@ struct BookDetailsMainView: View {
                         .font(.headline)
                         
                         HStack {
-                            Image(systemName: "checkmark.circle")
-                                .accessibilityLabel("Mark As Read")
-                            Button("Mark As Read") {
-                                
+                            Button {
+                                print("Mark As Read pressed")
+                            } label: {
+                                Label("Mark As Read", systemImage: "checkmark.circle")
                             }
+                            .frame(width: 345.0, height: 55.0)
+                            .accessibilityAddTraits([.isButton])
+                            .accessibilityLabel("Mark As Read")
+                            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                            .cornerRadius(/*@START_MENU_TOKEN@*/51.0/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
                         }
-                        .frame(width: 345.0, height: 55)
-                        .background(Color.blue)
                         
-                        .cornerRadius(51.0)
-                        .foregroundColor(.white)
-                        .font(.headline)
                         
                         HStack {
-                            Image(systemName: "square.stack.3d.up")
-                                .accessibilityLabel("Add to Read Pile")
-                            Button("Add to Read Pile") {
-                                
+                            Button {
+                                print("Add to Reading Pile pressed")
+                            } label: {
+                                Label("Add to Reading Pile", systemImage: "square.stack.3d.up")
                             }
+                            .frame(width: 345.0, height: 55.0)
+                            .accessibilityAddTraits([.isButton])
+                            .accessibilityLabel("Add to Reading Pile")
+                            .background(/*@START_MENU_TOKEN@*//*@PLACEHOLDER=View@*/Color.blue/*@END_MENU_TOKEN@*/)
+                            .foregroundColor(/*@START_MENU_TOKEN@*/.white/*@END_MENU_TOKEN@*/)
+                            .cornerRadius(/*@START_MENU_TOKEN@*/51.0/*@END_MENU_TOKEN@*/)
+                            .font(/*@START_MENU_TOKEN@*/.headline/*@END_MENU_TOKEN@*/)
                         }
+                        
                         .frame(width: 345.0, height: 55)
                         .background(Color.blue)
                         
@@ -201,6 +218,7 @@ struct BookDetailsMainView: View {
         }
     }
 }
+
 
 struct BookDetailsMainView_Previews: PreviewProvider {
     static var previews: some View {

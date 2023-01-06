@@ -12,7 +12,6 @@
 		ED112034295FE8420065672A /* CreativesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED112033295FE8420065672A /* CreativesModel.swift */; };
 		ED112036295FED7F0065672A /* PeopleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED112035295FED7F0065672A /* PeopleModel.swift */; };
 		ED2C9ACD2961DC15006027C1 /* BookSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C9ACC2961DC15006027C1 /* BookSheetView.swift */; };
-		ED535F902966854E00E63C97 /* LibraryNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED535F8F2966854E00E63C97 /* LibraryNewView.swift */; };
 		ED7AFD152963AE4900A538FE /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7AFD142963AE4900A538FE /* Library.swift */; };
 		EDA04649295EAED2006291E8 /* libraryData.json in Resources */ = {isa = PBXBuildFile; fileRef = EDA04648295EAED2006291E8 /* libraryData.json */; };
 		EDA0464B295EAF3F006291E8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0464A295EAF3F006291E8 /* ModelData.swift */; };
@@ -39,7 +38,6 @@
 		ED112033295FE8420065672A /* CreativesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreativesModel.swift; sourceTree = "<group>"; };
 		ED112035295FED7F0065672A /* PeopleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeopleModel.swift; sourceTree = "<group>"; };
 		ED2C9ACC2961DC15006027C1 /* BookSheetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookSheetView.swift; sourceTree = "<group>"; };
-		ED535F8F2966854E00E63C97 /* LibraryNewView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryNewView.swift; sourceTree = "<group>"; };
 		ED7AFD142963AE4900A538FE /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		ED7AFD162963C31700A538FE /* Comic-Reader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Comic-Reader-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EDA04648295EAED2006291E8 /* libraryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = libraryData.json; sourceTree = "<group>"; };
@@ -108,7 +106,6 @@
 				EDA669B729621F3E0069176E /* HomeView.swift */,
 				EDA669BB29621F6B0069176E /* SearchView.swift */,
 				EDA669B929621F610069176E /* LibraryView.swift */,
-				ED535F8F2966854E00E63C97 /* LibraryNewView.swift */,
 				EDA669BD29621F750069176E /* ReadingListsView.swift */,
 			);
 			path = Controllers;
@@ -258,7 +255,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED535F902966854E00E63C97 /* LibraryNewView.swift in Sources */,
 				EDA669BE29621F750069176E /* ReadingListsView.swift in Sources */,
 				EDA04667295FC1FE006291E8 /* BookDetailsMainView.swift in Sources */,
 				EDA669B829621F3E0069176E /* HomeView.swift in Sources */,
