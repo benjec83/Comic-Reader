@@ -20,8 +20,8 @@ struct BookSheetView: View {
         TabView {
             BookDetailsMainView(book: book)
                 .tabItem {
-                    Image(systemName: "eye.fill")
-                    Text("Overview")
+                    Image(systemName: "info")
+                    Text("Information")
                 }
             BookDetailsCreativesView(book: book)
                 .tabItem {
@@ -35,28 +35,11 @@ struct BookSheetView: View {
                 }
             BookDetailsLibraryView(book: book)
                 .tabItem {
-            Image(systemName: "star")
-            Text("Library")
-                }
-                .toolbar {
-                    ToolbarItemGroup(placement: .automatic) {
-                        
-                        navigationTitle("Title")
-                        Button {
-                            
-                        } label: {
-                            Label("Main", systemImage: "house")
-                        }
-                    }
+            Image(systemName: "rectangle.grid.3x2")
+            Text("Collection")
                 }
         }
-        .navigationTitle("#" + book.issue + " - " + (book.title ?? book.series))
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(trailing:
-                                Button{} label: {
-                Label("More", systemImage: "ellipsis.circle")
-            }
-        )
+        
     }
 }
 

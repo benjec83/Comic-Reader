@@ -1,5 +1,5 @@
 //
-//  LibraryView.swift
+//  LibraryNewView.swift
 //  Comic Reader
 //
 //  Created by Ben Carney on 1/1/23.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LibraryView: View {
+struct LibraryNewView: View {
     @Environment(\.isSearching) var isSearching
 
     var library = ComicLibrary()
@@ -36,7 +36,7 @@ struct LibraryView: View {
     }
     
     var body: some View {
-        Text("")
+        Text("Content")
             .multilineTextAlignment(.leading)
             .navigationTitle("Library")
         
@@ -46,45 +46,33 @@ struct LibraryView: View {
                       spacing: spacing
             )
             { ForEach(filteredBooks) { item in
+        
+//                Button {
+//                    selected = item
+//                } label: {
+//                    BookTileModel(book: item)
+//                }
                 
-                Button {
-                    selected = item
-                } label: {
-                    BookTileModel(book: item)
-                }
-                
-//                                NavigationLink(destination: BookSheetView(book:book),
-//                                               label: {BookTileModel(book: book)})
+                                NavigationLink(destination: BookSheetView(book:item),
+                                               label: {BookTileModel(book: item)})
                 
             }
             }
             .searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "Search by Series")
             //  Start of sheet
             .sheet(item: $selected) { item in
-                NavigationView {
-                    VStack {
-                        BookSheetView(book: item)
-                    }
-                    .navigationTitle("#" + book.issue + " - " + (book.title ?? book.series))
-                    .navigationBarTitleDisplayMode(.inline)
-                    .navigationBarItems(trailing:
-                                            Button{} label: {
-                            Label("More", systemImage: "ellipsis.circle")
-                        }
-                )
-                    }
-                }
+                BookSheetView(book: item)
             }
             // End of sheet
-            
+
 
         }
 
     }
     
+}
 
-
-struct LibraryView_Previews: PreviewProvider {
+struct LibraryNewView_Previews: PreviewProvider {
     static var library = ComicLibrary().library
     
     static var previews: some View {
