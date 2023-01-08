@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct LibraryView: View {
     @Environment(\.isSearching) var isSearching
-
+    
     var library = ComicLibrary()
     
     @State private var showingSheet = false
@@ -23,7 +24,7 @@ struct LibraryView: View {
             }
         }
     }
-
+    
     let book: Book
     let books: [Book]
     
@@ -40,8 +41,9 @@ struct LibraryView: View {
             .multilineTextAlignment(.leading)
             .navigationTitle("Library")
         
-        ScrollView {
-
+        
+        ScrollView(.vertical) {
+            
             LazyVGrid(columns: gridItems,
                       spacing: spacing
             )
@@ -53,46 +55,22 @@ struct LibraryView: View {
                     BookTileModel(book: item)
                 }
                 
-//                                NavigationLink(destination: BookSheetView(book:book),
-//                                               label: {BookTileModel(book: book)})
+                //                                NavigationLink(destination: BookSheetView(book:book),
+                //                                               label: {BookTileModel(book: book)})
                 
             }
             }
-            .searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .automatic), prompt: "Search by Series")
+            .searchable(text: $searchQuery, placement: .navigationBarDrawer, prompt: "Search")
             //  Start of sheet
             .sheet(item: $selected) { item in
                 NavigationView {
                     VStack {
                         BookSheetView(book: item)
                     }
-                    .navigationTitle("#" + book.issue + " - " + (book.title ?? book.series))
-                    .navigationBarTitleDisplayMode(.inline)
-                    .navigationBarItems(trailing:
-                                            Button{} label: {
-                            Label("More", systemImage: "ellipsis.circle")
-                        }
-                )
-                    }
                 }
             }
             // End of sheet
-            
-
         }
-
     }
     
-
-
-struct LibraryView_Previews: PreviewProvider {
-    static var library = ComicLibrary().library
-    
-    static var previews: some View {
-        Group {
-            ContentView()
-                .previewDevice("iphone 14 Pro Max")
-            
-            ContentView()
-                .previewDevice("ipad Pro (12.9-inch)")
-        }    }
 }

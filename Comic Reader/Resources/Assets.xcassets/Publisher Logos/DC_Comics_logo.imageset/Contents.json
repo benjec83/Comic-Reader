@@ -1,15 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "DC_Comics_logo.svg",
+      "filename" : "DC_Comics_logo32.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "DC_Comics_logo64.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
+      "filename" : "DC_Comics_logo.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

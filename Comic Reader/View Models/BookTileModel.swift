@@ -9,7 +9,32 @@ import SwiftUI
 
 
 struct BookTileModel: View {
+    
     var book: Book
+    
+    var readColor: Color {
+        if book.read ?? 0 >= 100 {
+            return Color.blue
+        } else {
+            return Color("NotTrueColor")
+        }
+    }
+    
+    var favoriteColor: Color {
+        if book.favorite == true {
+            return Color.blue
+        } else {
+            return Color("NotTrueColor")
+        }
+    }
+    
+    var downloadColor: Color {
+        if book.downloaded == true {
+            return Color.blue
+        } else {
+            return Color("NotTrueColor")
+        }
+    }
     
     var body: some View {
         
@@ -31,7 +56,17 @@ struct BookTileModel: View {
                 Text(book.series + " (" + book.volume + ")")
                     .font(.caption2)
                     .lineLimit(1)
-                
+                HStack(spacing: -1.0) {
+                    Spacer()
+                    Image(systemName: "checkmark.seal")
+                        .foregroundColor(readColor)
+                    Image(systemName: "star")
+                        .foregroundColor(favoriteColor)
+                    Image(systemName: "square.and.arrow.down")
+                        .foregroundColor(downloadColor)
+                    Spacer()
+                    
+                }
                 Spacer()
                 
             }
@@ -42,16 +77,16 @@ struct BookTileModel: View {
         .foregroundColor(.secondary)
         .multilineTextAlignment(.leading)
         
-    }    
+    }
 }
 
 
 struct BookTileViewModel_Previews: PreviewProvider {
     static var previews: some View {
-        Group {
-            BookTileModel(book: books[0])
-            BookTileModel(book: books[1])
-            BookTileModel(book: books[5])
-        }
+        //        Group {
+        BookTileModel(book: books[0])
+        //            BookTileModel(book: books[1])
+        //            BookTileModel(book: books[5])
+        //        }
     }
 }

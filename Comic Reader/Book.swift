@@ -17,6 +17,9 @@ struct Book: Hashable, Codable, Identifiable {
     var volume: String
     var storyArc: String?
     var description: String?
+    var favorite: Bool?
+    var read: Int?
+    var downloaded: Bool?
 //    var creativeTeam: [CreativeTeam]?
 
 
@@ -31,6 +34,3 @@ struct Book: Hashable, Codable, Identifiable {
     }
     
 }
-
-
-

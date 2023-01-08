@@ -5,6 +5,7 @@
         "volume": "2017",
         "id": 1001,
         "issue": "14",
+        "favorite": true,
         "imageName": "8613306-wwww",
         "publisherLogo": "DC_Comics_logo",
         "description": "Henry Bendix has threatened and manipulated and killed without consequence. Now, after a shocking coordinated attack on Earth’s heroes, it’s time for Superman, Jay, and the Revolutionaries to strike back. But first, Jay Nakamura must embrace his powers and become the hero Jon knows he can be."
@@ -37,6 +38,7 @@
         "volume": "2017",
         "id": 1004,
         "issue": "17",
+        "downloaded": true,
         "imageName": "8712277-superman-son-of-kal-el-17",
         "publisherLogo": "DC_Comics_logo",
         "description": "Superman and son are reunited...so why doesn't it feel so good? Could it be because of the Lexcorp automatons threatening the safety of Metropolis? I've got a bad feeling about this..."
@@ -48,6 +50,7 @@
         "volume": "2017",
         "id": 1005,
         "issue": "18",
+        "read": 99,
         "imageName": "8733035-3554c22d6e454e56aa5e95b33a044906c828",
         "publisherLogo": "DC_Comics_logo",
         "description": "With the landmark Action Comics #1050 just around the corner, prepare for the ultimate battle between Superman and Lex Luthor as Clark and Jon continue their intensive training. But will it be enough to overcome the mysterious new villain calling himself Red Sin?"
@@ -58,9 +61,10 @@
         "volume": "2013",
         "id": 1006,
         "issue": "1",
+        "favorite": true,
         "imageName": "2811995-screen_shot_2013_01_15_at_10.04.41_am",
         "publisherLogo": "DC_Comics_logo",
-        "description": "The Man of Steel's at a happy point in his life--he's got some good news to share with Batman. But tragic times are just around the corner, as one of Batman's deadliest foes is in Metropolis on a surprise visit!"
+        "description": "The Man of Steel's at a happy point in his life--he's got some good news to share with Batman. But tragic times are just around the corner, as one of Batman's deadliest foes is in Metropolis on a surprise visit!",
     },
 {    "series": "Nightwing",
     "title": "Leaping Into the Light Part 2",
@@ -68,6 +72,9 @@
     "volume": "2016",
     "id": 1007,
     "issue": "79",
+    "favorite": true,
+    "read": 100,
+    "downloaded": true,
     "imageName": "nightwing79",
     "publisherLogo": "DC_Comics_logo",
     "description": "Dick Grayson has inherited Alfred’s fortune, a puppy, and a whole lot of questions. Who is Mayor Zucco, and what is her relation to the man who murdered Dick’s parents? What sinister plans does Blockbuster have for Blüdhaven? What kind of dog food is best for a three-legged puppy? To answer these questions, Dick’s going to need a little help from his friends-past and present."

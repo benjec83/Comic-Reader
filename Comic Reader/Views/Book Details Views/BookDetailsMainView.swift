@@ -27,11 +27,14 @@ struct BookDetailsMainView: View {
                     HStack {
                         VStack(alignment: .leading) {
                             // Main Book Details
-                            Text("#" + book.issue + " - " + (book.title ?? ""))
-                                .font(.subheadline)
+                            Text("Title: " + (book.title ?? ""))
+                                .font(.body)
                                 .fontWeight(.semibold)
                                 .lineLimit(2)
-                            Text(book.series + " (" + book.volume + ")")
+                            Text("Issue: #" + book.issue)
+                                .font(.caption2)
+                                .lineLimit(2)
+                            Text("Series: " + book.series + " (" + book.volume + ")")
                                 .font(.caption2)
                                 .lineLimit(2)
                             Text("Story Arc: " + (book.storyArc ?? ""))
@@ -178,6 +181,7 @@ struct BookDetailsMainView: View {
                                     Image(systemName: "star")
                                     Image(systemName: "star")
                                 }
+                                .foregroundColor(Color.gray)
                             }
                             Spacer()
                             VStack {
@@ -192,7 +196,7 @@ struct BookDetailsMainView: View {
                                     Image(systemName: "star")
                                     Image(systemName: "star")
                                 }
-                                
+                                .foregroundColor(Color.gray)
                             }
                             Spacer()
                         }
@@ -207,21 +211,25 @@ struct BookDetailsMainView: View {
             Divider()
                 .padding(.horizontal, 30.0)
             VStack(alignment: .leading) {
-                Text("Description:")
-                    .fontWeight(.semibold)
-                    .padding(.bottom, 5.0)
+                HStack {
+                    Text("Description:")
+                        .fontWeight(.semibold)
+                        .padding(.bottom, 5.0)
+                    Spacer()
+                }
                 Text(book.description ?? "")
             }
             .font(.subheadline)
             .padding(.horizontal)
             .frame(maxWidth: 690)
+            
         }
     }
 }
-
-
-struct BookDetailsMainView_Previews: PreviewProvider {
-    static var previews: some View {
-        BookDetailsMainView(book: books[2])
-    }
-}
+//
+//
+//struct BookDetailsMainView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BookDetailsMainView(book: books[2])
+//    }
+//}

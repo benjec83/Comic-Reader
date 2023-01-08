@@ -9,13 +9,29 @@ import SwiftUI
 
 struct BookSheetView: View {
     @State private var showingSheet = false
-
+    
     @State var isModalSheetShown: Bool = false
-
+    
     var book: Book
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
+        Text("")
+            .navigationTitle("#" + book.issue + " - " + (book.title ?? book.series))
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(trailing:
+                                    HStack {
+                Button{
+                    print("Edit pressed")
+                } label: {
+                    Label("Edit", systemImage: "pencil")
+                }
+                Button{
+                    print("More pressed")
+                } label: {
+                    Label("More", systemImage: "ellipsis.circle")
+                }
+            })
         
         TabView {
             BookDetailsMainView(book: book)
@@ -35,16 +51,16 @@ struct BookSheetView: View {
                 }
             BookDetailsLibraryView(book: book)
                 .tabItem {
-            Image(systemName: "rectangle.grid.3x2")
-            Text("Collection")
+                    Image(systemName: "rectangle.grid.3x2")
+                    Text("Collection")
                 }
         }
         
     }
 }
-
-struct BookSheetView_Previews: PreviewProvider {
-    static var previews: some View {
-        BookSheetView(book: books[1])
-    }
-}
+//
+//struct BookSheetView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        BookSheetView(book: books[1])
+//    }
+//}

@@ -7,10 +7,16 @@
 
 import SwiftUI
 
+
 struct SearchView: View {
+
+    @State var searchQuery = ""
+    
     var body: some View {
         Text("Search View")
             .navigationTitle("Search")
+            .searchable(text: $searchQuery, placement: .navigationBarDrawer(displayMode: .always), prompt: "Search")
+            
         
     }
 }
