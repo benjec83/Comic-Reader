@@ -11,7 +11,7 @@ import SwiftUI
 struct Comic_ReaderApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(focus: "")
         }
     }
 }

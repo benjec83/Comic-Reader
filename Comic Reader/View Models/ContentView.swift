@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     
+    var focus: String
+    
     var body: some View {
         NavigationView {
             List {
+                
                 NavigationLink(destination: HomeView(book: books[1], books: books)) {
                     Label("Home", systemImage: "book")
                 }
@@ -19,23 +22,40 @@ struct ContentView: View {
                     Label("Search", systemImage: "magnifyingglass")
                 }
                 Section("Library", content: {
-                    NavigationLink(destination: LibraryView(book: books[1], books: books)) {
+                    NavigationLink {
+                        LibraryView(focus: "Library", book: books[1], books: books)
+                    } label: {
                         Label("All Books", systemImage: "books.vertical")
                     }
-                    NavigationLink {Text("Reading Pile")} label: {
+                    NavigationLink {
+                        LibraryView(focus: "Reading Pile", book: books[1], books: books)
+                    } label: {
                         Label("Reading Pile", systemImage: "square.stack.3d.up")
                     }
-                    NavigationLink {Text("Recently Added")} label: {
+                    NavigationLink {
+                        LibraryView(focus: "Recently Added", book: books[1], books: books)
+                    } label: {
                         Label("Recently Added", systemImage: "clock")
                     }
-                    NavigationLink {LibraryFavoritesView()} label: {
+                    NavigationLink {
+                        LibraryView(focus: "Favorites", book: books[1], books: books)
+                    } label: {
                         Label("Favorites", systemImage: "star")
                     }
-                    NavigationLink {Text("Story Arcs")} label: {
-                        Label("Story Arcs", systemImage: "archivebox")
-                    }
-                    NavigationLink {Text("Downloaded")} label: {
+                    NavigationLink {
+                        LibraryView(focus: "Downloaded", book: books[1], books: books)
+                    } label: {
                         Label("Downloaded", systemImage: "square.and.arrow.down")
+                    }
+                    NavigationLink {
+                        LibraryView(focus: "Story Arcs", book: books[1], books: books)
+                    } label: {
+                        Label("Story Arcs", systemImage: "square.fill.text.grid.1x2")
+                    }
+                    NavigationLink {
+                        LibraryView(focus: "Events", book: books[1], books: books)
+                    } label: {
+                        Label("Events", systemImage: "text.badge.star")
                     }
                 })
                 Section("Reading Lists", content: {
@@ -60,7 +80,7 @@ struct ContentView: View {
                     Label("Settings", systemImage: "gear")
                 }
             }
-            .listStyle(.automatic )
+            .listStyle(.sidebar )
             .navigationTitle("Menu")
             
             HomeView(book: books[1], books: books)
@@ -73,7 +93,7 @@ struct ContentView: View {
 //    static var previews: some View {
 //        ContentView()
 //        //            .preferredColorScheme(.dark)
-//        
+//
 //    }
 //}
 

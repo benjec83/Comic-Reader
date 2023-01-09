@@ -42,7 +42,7 @@ struct HomeView: View {
                     Button{
                         print("Currently Reading More pressed")
                     } label: {
-                        Label("", systemImage: "chevron.right")
+                        Label("View all", systemImage: "chevron.right")
                     }
                 }
                 ScrollView(.horizontal) {
@@ -63,7 +63,7 @@ struct HomeView: View {
                     }
                     //  Start of sheet
                     .sheet(item: $selected) { item in
-                        NavigationView {
+                        NavigationStack {
                             VStack {
                                 BookSheetView(book: item)
                             }
@@ -80,7 +80,7 @@ struct HomeView: View {
                     Button{
                         print("Recently Added More pressed")
                     } label: {
-                        Label("", systemImage: "chevron.right")
+                        Label("View all", systemImage: "chevron.right")
                     }
                 }
                 ScrollView(.horizontal) {
@@ -101,7 +101,7 @@ struct HomeView: View {
                     }
                     //  Start of sheet
                     .sheet(item: $selected) { item in
-                        NavigationView {
+                        NavigationStack {
                             VStack {
                                 BookSheetView(book: item)
                             }
@@ -117,7 +117,7 @@ struct HomeView: View {
                     Button{
                         print("Favorites More pressed")
                     } label: {
-                        Label("", systemImage: "chevron.right")
+                        Label("View all", systemImage: "chevron.right")
                     }
                 }
                 ScrollView(.horizontal) {
@@ -134,7 +134,7 @@ struct HomeView: View {
                     }
                     //  Start of sheet
                     .sheet(item: $selected) { item in
-                        NavigationView {
+                        NavigationStack {
                             VStack {
                                 BookSheetView(book: item)
                             }
@@ -167,7 +167,7 @@ struct HomeView: View {
                     }
                     //  Start of sheet
                     .sheet(item: $selected) { item in
-                        NavigationView {
+                        NavigationStack {
                             VStack {
                                 BookSheetView(book: item)
                             }

@@ -11,7 +11,20 @@ import Foundation
 struct LibraryView: View {
     @Environment(\.isSearching) var isSearching
     
+    @State var focus: String
+    
     var library = ComicLibrary()
+    
+    var SearchType: String {
+        switch(focus) {
+        case "Favorites":
+            return "favorite"
+        case "Recently Added":
+            return "read"
+        default:
+            return ""
+        }
+    }
     
     @State private var showingSheet = false
     @State var searchQuery = ""
@@ -36,10 +49,12 @@ struct LibraryView: View {
         [GridItem(.adaptive(minimum: 180, maximum: 180))]
     }
     
+    
+    
     var body: some View {
         Text("")
             .multilineTextAlignment(.leading)
-            .navigationTitle("Library")
+            .navigationTitle("\(focus)")
         
         
         ScrollView(.vertical) {
@@ -47,6 +62,7 @@ struct LibraryView: View {
             LazyVGrid(columns: gridItems,
                       spacing: spacing
             )
+            
             { ForEach(filteredBooks) { item in
                 
                 Button {
@@ -59,18 +75,29 @@ struct LibraryView: View {
                 //                                               label: {BookTileModel(book: book)})
                 
             }
+            .onDrag { // mean drag a row container
+                return NSItemProvider()
             }
+
+            }
+            //        .onDelete(perform: deleteItem)
+//            .onMove(perform: move)
             .searchable(text: $searchQuery, placement: .navigationBarDrawer, prompt: "Search")
             //  Start of sheet
             .sheet(item: $selected) { item in
-                NavigationView {
+                NavigationStack {
                     VStack {
                         BookSheetView(book: item)
                     }
                 }
             }
             // End of sheet
+            
+
         }
+//        func move(from source: IndexSet, to destination: Int) {
+//            item.move(fromOffsets: source, toOffset: destination )
+//        }
     }
     
 }
