@@ -28,6 +28,16 @@ struct ContentView: View {
                         Label("All Books", systemImage: "books.vertical")
                     }
                     NavigationLink {
+                        ListView(focus: "List View", book: books[1], books: books)
+                    } label: {
+                        Label("List View", systemImage: "list.bullet")
+                    }
+                    NavigationLink {
+                        CollectionListView(focus: "List View", book: books[1], books: books)
+                    } label: {
+                        Label("List View", systemImage: "list.bullet")
+                    }
+                    NavigationLink {
                         LibraryView(focus: "Reading Pile", book: books[1], books: books)
                     } label: {
                         Label("Reading Pile", systemImage: "square.stack.3d.up")

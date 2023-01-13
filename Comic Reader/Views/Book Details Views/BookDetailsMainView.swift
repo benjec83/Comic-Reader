@@ -25,8 +25,9 @@ struct BookDetailsMainView: View {
                 VStack {
                     //Book Details
                     HStack {
+                        
+                        // Main Book Details
                         VStack(alignment: .leading) {
-                            // Main Book Details
                             Text("Title: " + (book.title ?? ""))
                                 .font(.body)
                                 .fontWeight(.semibold)
@@ -47,8 +48,8 @@ struct BookDetailsMainView: View {
                     }
                     .frame(width: 360)
                     
+                    // Secondary Book Details
                     HStack(alignment: .top) {
-                        // Secondary Book Details
                         
                         VStack(alignment: .center) {
                             Spacer()
@@ -60,15 +61,13 @@ struct BookDetailsMainView: View {
                             PublisherLogo(publisherLogo: book.logo)
                                 .scaledToFit()
                                 .frame(height: 40)
-                            
                             Spacer()
-                            
-                            
-                            
                         }
                         .frame(width: 120)
                         
                         Divider()
+                        
+                        //Released
                         VStack {
                             Spacer()
                                 .frame(height: 10)
@@ -85,6 +84,8 @@ struct BookDetailsMainView: View {
                         }
                         .frame(width: 120)
                         Divider()
+                        
+                        //Pages
                         VStack {
                             Spacer()
                                 .frame(height: 10)
@@ -104,6 +105,8 @@ struct BookDetailsMainView: View {
                     }
                     .frame(height: 65)
                     Divider()
+                    
+                    //Action Buttons
                     VStack {
                         Spacer()
                         HStack {
@@ -166,9 +169,9 @@ struct BookDetailsMainView: View {
                         .foregroundColor(.white)
                         .font(.headline)
                         Spacer()
+                        //Ratings
                         HStack {
                             Spacer()
-                            //Ratings
                             VStack{
                                 Text("Personal Rating")
                                     .font(.caption)
@@ -206,8 +209,8 @@ struct BookDetailsMainView: View {
                 .padding(.all)
                 .frame(width: 380)
             }
-            .padding(.top)
             .frame(width: 710)
+
             Divider()
                 .padding(.horizontal, 30.0)
             VStack(alignment: .leading) {
@@ -226,10 +229,10 @@ struct BookDetailsMainView: View {
         }
     }
 }
-//
-//
-//struct BookDetailsMainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BookDetailsMainView(book: books[2])
-//    }
-//}
+
+
+struct BookDetailsMainView_Previews: PreviewProvider {
+    static var previews: some View {
+        BookDetailsMainView(book: books[2])
+    }
+}

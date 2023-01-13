@@ -52,9 +52,32 @@ struct LibraryView: View {
     
     
     var body: some View {
-        Text("")
-            .multilineTextAlignment(.leading)
-            .navigationTitle("\(focus)")
+        HStack {
+            Spacer()
+            HStack {
+                Button {
+                    print("Gallery View")
+                } label: {
+                    Label("Gallery", systemImage: "square.grid.2x2")
+                }
+                Button {
+                    print("List View")
+                } label: {
+                    Label("List", systemImage: "line.3.horizontal")
+                }
+            }
+            Button {
+                print("Filter")
+            } label: {
+                Label("Filter", systemImage: "line.3.horizontal.decrease")
+            }
+        }
+        .padding(.trailing, 40.0)
+        .padding(.vertical, 10.0)
+
+        
+        .multilineTextAlignment(.leading)
+        .navigationTitle("\(focus)")
         
         
         ScrollView(.vertical) {
@@ -75,29 +98,20 @@ struct LibraryView: View {
                 //                                               label: {BookTileModel(book: book)})
                 
             }
-            .onDrag { // mean drag a row container
-                return NSItemProvider()
             }
-
-            }
-            //        .onDelete(perform: deleteItem)
-//            .onMove(perform: move)
-            .searchable(text: $searchQuery, placement: .navigationBarDrawer, prompt: "Search")
-            //  Start of sheet
-            .sheet(item: $selected) { item in
-                NavigationStack {
-                    VStack {
-                        BookSheetView(book: item)
-                    }
+            
+        }
+        .searchable(text: $searchQuery, placement: .navigationBarDrawer, prompt: "Search")
+        //  Start of sheet
+        .sheet(item: $selected) { item in
+            NavigationStack {
+                VStack {
+                    BookSheetView(book: item)
                 }
             }
-            // End of sheet
-            
-
         }
-//        func move(from source: IndexSet, to destination: Int) {
-//            item.move(fromOffsets: source, toOffset: destination )
-//        }
+        // End of sheet
     }
-    
 }
+
+

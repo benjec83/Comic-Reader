@@ -16,23 +16,7 @@ struct BookSheetView: View {
     @Environment(\.dismiss) var dismiss
     
     var body: some View {
-        Text("")
-            .navigationTitle("#" + book.issue + " - " + (book.title ?? book.series))
-            .navigationBarTitleDisplayMode(.inline)
-            .navigationBarItems(trailing:
-                                    HStack {
-                Button{
-                    print("Edit pressed")
-                } label: {
-                    Label("Edit", systemImage: "pencil")
-                }
-                Button{
-                    print("More pressed")
-                } label: {
-                    Label("More", systemImage: "ellipsis.circle")
-                }
-            })
-        
+
         TabView {
             BookDetailsMainView(book: book)
                 .tabItem {
@@ -55,7 +39,21 @@ struct BookSheetView: View {
                     Text("Collection")
                 }
         }
-        
+        .navigationTitle("#" + book.issue + " - " + (book.title ?? book.series))
+        .navigationBarTitleDisplayMode(.inline)
+        .navigationBarItems(trailing:
+                                HStack {
+            Button{
+                print("Edit pressed")
+            } label: {
+                Label("Edit", systemImage: "pencil")
+            }
+            Button{
+                print("More pressed")
+            } label: {
+                Label("More", systemImage: "ellipsis.circle")
+            }
+        })
     }
 }
 //
