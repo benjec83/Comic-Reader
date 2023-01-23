@@ -9,13 +9,20 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @EnvironmentObject var modelData: ModelData
+
+    
     var focus: String
+    
+    let book: Book
+    let books: [Book]
+        
     
     var body: some View {
         NavigationView {
             List {
                 
-                NavigationLink(destination: HomeView(book: books[1], books: books)) {
+                NavigationLink(destination: HomeView(recentlyAdded: books)) {
                     Label("Home", systemImage: "book")
                 }
                 NavigationLink(destination: SearchView()) {
@@ -26,11 +33,6 @@ struct ContentView: View {
                         LibraryView(focus: "Library", book: books[1], books: books)
                     } label: {
                         Label("All Books", systemImage: "books.vertical")
-                    }
-                    NavigationLink {
-                        ListView(focus: "List View", book: books[1], books: books)
-                    } label: {
-                        Label("List View", systemImage: "list.bullet")
                     }
                     NavigationLink {
                         CollectionListView(focus: "List View", book: books[1], books: books)
@@ -93,17 +95,21 @@ struct ContentView: View {
             .listStyle(.sidebar )
             .navigationTitle("Menu")
             
-            HomeView(book: books[1], books: books)
+            HomeView(recentlyAdded: books)
         }
+        
+
+        
     }
 }
 
-//
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//        //            .preferredColorScheme(.dark)
-//
-//    }
-//}
+
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(focus: "Focus", book: books[1], books: books)
+            .environmentObject(ModelData())
+        //            .preferredColorScheme(.dark)
+
+    }
+}
 

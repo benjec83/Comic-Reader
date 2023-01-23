@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct HomeView: View {
     @Environment(\.isSearching) var isSearching
@@ -14,8 +15,37 @@ struct HomeView: View {
     
     
     
-    let book: Book
-    let books: [Book]
+//    let book: Book
+//    let books: [Book]
+    
+    
+    var currentlyReading: [Book] {
+        books.sorted(by: { $0.series ?? "" < $1.series ?? "" })
+//        books.filter { book in
+//            book.read ?? 0 >= 1
+//        }
+    }
+
+    var recentlyAdded: [Book]
+    
+    var favorites: [Book] {
+        books.filter { book in
+            (book.favorite ?? false)
+        }
+    }
+    
+    
+    
+    //    var filteredBooks: [Book] {
+    //        if searchQuery.isEmpty {
+    //            return library.library
+    //        } else {
+    //            return library.library.filter {
+    //                $0.series.localizedCaseInsensitiveContains(searchQuery)
+    //            }
+    //        }
+    //    }
+    
     
     @State private var selected: Book? = nil
     
@@ -48,17 +78,13 @@ struct HomeView: View {
                 ScrollView(.horizontal) {
                     
                     LazyHGrid(rows: rows) {
-                        ForEach(books) { item in
+                        ForEach(currentlyReading) { item in
                             
                             Button {
                                 selected = item
                             } label: {
                                 BookTileModel(book: item)
                             }
-                            
-                            //                                NavigationLink(destination: BookSheetView(book:book),
-                            //                                               label: {BookTileModel(book: book)})
-                            
                         }
                     }
                     //  Start of sheet
@@ -86,7 +112,7 @@ struct HomeView: View {
                 ScrollView(.horizontal) {
                     
                     LazyHGrid(rows: rows) {
-                        ForEach(books) { item in
+                        ForEach(recentlyAdded) { item in
                             
                             Button {
                                 selected = item
@@ -110,6 +136,7 @@ struct HomeView: View {
                     // End of sheet
                 }
             }
+            
             VStack {
                 HStack {
                     Text("Favorites")
@@ -123,7 +150,7 @@ struct HomeView: View {
                 ScrollView(.horizontal) {
                     
                     LazyHGrid(rows: rows) {
-                        ForEach(books) { item in
+                        ForEach(favorites) { item in
                             
                             Button {
                                 selected = item
@@ -163,7 +190,7 @@ struct HomeView: View {
                             } label: {
                                 BookTileModel(book: item)
                             }
-                          }
+                        }
                     }
                     //  Start of sheet
                     .sheet(item: $selected) { item in
@@ -181,3 +208,11 @@ struct HomeView: View {
         
     }
 }
+
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        HomeView(recentlyAdded: books)
+    }
+}
+
+

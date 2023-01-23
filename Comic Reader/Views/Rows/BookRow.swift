@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BookRow: View {
+    
     var book: Book
     
     var body: some View {
@@ -16,15 +17,21 @@ struct BookRow: View {
             book.image
                 .resizable()
                 .scaledToFit()
-            .frame(width: 50, height: 50)
+                .frame(width: 50, height: 50)
             VStack(alignment: .leading) {
                 Text("#" + book.issue + " - " + (book.title ?? ""))
                 Text(book.series)
                     .font(.caption)
             }
+            Spacer()
+            
+            if book.favorite ?? false {
+                Image(systemName: "star.fill")
+                    .foregroundColor(.yellow)
+                //            }
+            }
+            
         }
-        
-        
     }
 }
 
@@ -37,7 +44,7 @@ struct BookRow_Previews: PreviewProvider {
             BookRow(book: books[3])
             BookRow(book: books[4])
         }
-                .previewLayout(.fixed(width: 300, height: 70))
+        .previewLayout(.fixed(width: 300, height: 70))
         
     }
 }

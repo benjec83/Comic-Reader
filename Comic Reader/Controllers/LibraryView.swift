@@ -9,6 +9,7 @@ import SwiftUI
 import Foundation
 
 struct LibraryView: View {
+    @EnvironmentObject var modelData: ModelData
     @Environment(\.isSearching) var isSearching
     
     @State var focus: String
@@ -26,7 +27,6 @@ struct LibraryView: View {
         }
     }
     
-    @State private var showingSheet = false
     @State var searchQuery = ""
     var filteredBooks: [Book] {
         if searchQuery.isEmpty {
@@ -75,31 +75,26 @@ struct LibraryView: View {
         .padding(.trailing, 40.0)
         .padding(.vertical, 10.0)
 
-        
+
         .multilineTextAlignment(.leading)
         .navigationTitle("\(focus)")
-        
-        
+
+
         ScrollView(.vertical) {
-            
+
             LazyVGrid(columns: gridItems,
                       spacing: spacing
             )
-            
+
             { ForEach(filteredBooks) { item in
-                
+
                 Button {
                     selected = item
                 } label: {
                     BookTileModel(book: item)
                 }
-                
-                //                                NavigationLink(destination: BookSheetView(book:book),
-                //                                               label: {BookTileModel(book: book)})
-                
             }
             }
-            
         }
         .searchable(text: $searchQuery, placement: .navigationBarDrawer, prompt: "Search")
         //  Start of sheet

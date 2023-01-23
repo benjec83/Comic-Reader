@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct ReadingList: Decodable, Identifiable, Hashable {
-    let books: [position: Int, book: [Book]
+    let books: [Book]
     let id: Int
     let position: Int
 }
