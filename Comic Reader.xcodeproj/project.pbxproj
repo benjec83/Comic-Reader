@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		4A027692297B00AC001C4A24 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A027691297B00AC001C4A24 /* SwiftUIView.swift */; };
 		4A97A3882973583B00BD5FCA /* BookDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A97A3872973583B00BD5FCA /* BookDetails.swift */; };
-		4AE0CCAB297244620092AD09 /* funcMove.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0CCAA297244620092AD09 /* funcMove.swift */; };
 		4AE0CCB129724A520092AD09 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0CCB029724A520092AD09 /* DataLoader.swift */; };
-		4AE0CCB32972569D0092AD09 /* NavBarBookDetailButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0CCB22972569D0092AD09 /* NavBarBookDetailButtons.swift */; };
 		4AE0CCB529725FB40092AD09 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0CCB429725FB40092AD09 /* FavoriteButton.swift */; };
 		4AE967C9296E3435007D666A /* CollectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE967C8296E3435007D666A /* CollectionListView.swift */; };
 		4AE968122971F11B007D666A /* ReadingList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE968112971F11A007D666A /* ReadingList.swift */; };
@@ -46,9 +44,7 @@
 /* Begin PBXFileReference section */
 		4A027691297B00AC001C4A24 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		4A97A3872973583B00BD5FCA /* BookDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetails.swift; sourceTree = "<group>"; };
-		4AE0CCAA297244620092AD09 /* funcMove.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = funcMove.swift; sourceTree = "<group>"; };
 		4AE0CCB029724A520092AD09 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
-		4AE0CCB22972569D0092AD09 /* NavBarBookDetailButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarBookDetailButtons.swift; sourceTree = "<group>"; };
 		4AE0CCB429725FB40092AD09 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		4AE967C8296E3435007D666A /* CollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListView.swift; sourceTree = "<group>"; };
 		4AE968112971F11A007D666A /* ReadingList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingList.swift; sourceTree = "<group>"; };
@@ -104,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				4AE0CCB429725FB40092AD09 /* FavoriteButton.swift */,
-				4AE0CCAA297244620092AD09 /* funcMove.swift */,
 				4AE0CCB029724A520092AD09 /* DataLoader.swift */,
 				4AF00CD329732B9600E24FE7 /* BookStatusTile.swift */,
 				4A97A3872973583B00BD5FCA /* BookDetails.swift */,
@@ -147,7 +142,6 @@
 				ED2B4CC5296A9243005A4FB7 /* Rows */,
 				ED112030295FE6560065672A /* Book Details Views */,
 				4AE967C8296E3435007D666A /* CollectionListView.swift */,
-				4AE0CCB22972569D0092AD09 /* NavBarBookDetailButtons.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -322,7 +316,6 @@
 				4AE0CCB129724A520092AD09 /* DataLoader.swift in Sources */,
 				EDC90D55295EA8C600E2339E /* Book.swift in Sources */,
 				EDA0465D295F6552006291E8 /* PublisherLogo.swift in Sources */,
-				4AE0CCB32972569D0092AD09 /* NavBarBookDetailButtons.swift in Sources */,
 				ED7AFD152963AE4900A538FE /* Library.swift in Sources */,
 				ED11202F295FE6410065672A /* BookDetailsDetailsView.swift in Sources */,
 				4AE967C9296E3435007D666A /* CollectionListView.swift in Sources */,
@@ -336,7 +329,6 @@
 				EDA669BC29621F6B0069176E /* SearchView.swift in Sources */,
 				EDC90D5C295EAC5900E2339E /* BookTileModel.swift in Sources */,
 				EDA0464B295EAF3F006291E8 /* ModelData.swift in Sources */,
-				4AE0CCAB297244620092AD09 /* funcMove.swift in Sources */,
 				ED112036295FED7F0065672A /* PeopleModel.swift in Sources */,
 				4A027692297B00AC001C4A24 /* SwiftUIView.swift in Sources */,
 				EDA04663295FC09F006291E8 /* BookDetailsCreativesView.swift in Sources */,

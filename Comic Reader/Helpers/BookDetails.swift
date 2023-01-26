@@ -45,7 +45,7 @@ struct BookSecondaryDetails: View {
         HStack(alignment: .top) {
             
             VStack(alignment: .center) {
-
+                
                 Text("Publisher")
                     .font(.subheadline)
                 Spacer()
@@ -61,7 +61,7 @@ struct BookSecondaryDetails: View {
             
             //Released
             VStack {
-
+                
                 Text("Released")
                     .font(.subheadline)
                 Spacer()
@@ -78,7 +78,7 @@ struct BookSecondaryDetails: View {
             
             //Pages
             VStack {
-
+                
                 Text("Length")
                     .font(.subheadline)
                 Spacer()
@@ -95,7 +95,7 @@ struct BookSecondaryDetails: View {
         }
         .padding(.top)
         .frame(height: 65)
-//        Divider()
+        //        Divider()
     }
 }
 
@@ -210,6 +210,12 @@ struct BookActionButtons: View {
 
 struct BookDetailTabs: View {
     
+    @EnvironmentObject var modelData: ModelData
+    
+    var bookIndex: Int {
+        modelData.books.firstIndex(where: { $0.id == book.id })!
+    }
+        
     var book: Book
     
     var body: some View {
@@ -245,15 +251,29 @@ struct BookDetailTabs: View {
             } label: {
                 Label("Edit", systemImage: "pencil")
             }
-            //            FavoriteButton(isSet: $modelData.books[bookIndex].favorite)
-            Button{
-                print("More " + (book.title ?? "") + " pressed")
+                        FavoriteButton(isSet: $modelData.books[bookIndex].favorite)
+            Menu {
+                Button{
+                    
+                } label: {
+                    Label("Button 1", systemImage: "pencil")
+                }
+                Button{
+                    
+                } label: {
+                    Label("Button 2", systemImage: "pencil")
+                }
+                Divider()
+                Button{
+                    
+                } label: {
+                    Label("Button 3", systemImage: "pencil")
+                }
             } label: {
                 Label("More", systemImage: "ellipsis.circle")
             }
         }
         )
-        
     }
     
 }

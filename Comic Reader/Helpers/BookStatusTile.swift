@@ -9,6 +9,12 @@ import SwiftUI
 
 struct BookStatusBar: View {
     
+    @EnvironmentObject var modelData: ModelData
+    
+    var bookIndex: Int {
+        modelData.books.firstIndex(where: { $0.id == book.id })!
+    }
+    
     var book: Book
     
     var readColor: Color {
@@ -19,13 +25,13 @@ struct BookStatusBar: View {
         }
     }
     
-    var favoriteColor: Color {
-        if book.favorite == true {
-            return Color.blue
-        } else {
-            return Color("NotTrueColor")
-        }
-    }
+//    var favoriteColor: Color {
+//        if book.favorite == true {
+//            return Color.blue
+//        } else {
+//            return Color("NotTrueColor")
+//        }
+//    }
     
     var downloadColor: Color {
         if book.downloaded == true {
@@ -40,8 +46,9 @@ struct BookStatusBar: View {
             Spacer()
             Image(systemName: "checkmark.seal")
                 .foregroundColor(readColor)
-            Image(systemName: "star")
-                .foregroundColor(favoriteColor)
+//            Image(systemName: "star")
+//                .foregroundColor(favoriteColor)
+            FavoriteButton(isSet: $modelData.books[bookIndex].favorite)
             Image(systemName: "square.and.arrow.down")
                 .foregroundColor(downloadColor)
             Spacer()

@@ -106,6 +106,12 @@ struct CollectionListView: View {
     }
 }
 
+func move(from source: IndexSet, to destination: Int) {
+    books.move(fromOffsets: source, toOffset: destination )
+    print(books.startIndex)
+    print(books.endIndex)
+}
+
 struct CollectionListView_Previews: PreviewProvider {
     static var previews: some View {
         CollectionListView(focus: "Focus", book: books[1], books: books)

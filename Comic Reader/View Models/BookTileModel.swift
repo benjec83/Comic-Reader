@@ -67,6 +67,46 @@ struct BookTileModel: View {
         .scaledToFit()
         .foregroundColor(.secondary)
         .multilineTextAlignment(.leading)
+        .contextMenu {
+            Button {
+                
+            } label: {
+                Label("Read Now", systemImage: "magazine")
+            }
+            Button {
+                
+            } label: {
+                Label("Mark As Read", systemImage: "checkmark.circle")
+            }
+            Button {
+                
+            } label: {
+                Label("Add to Favorite", systemImage: "star")
+            }
+            Button {
+                
+            } label: {
+                Label("Add to Reading Pile", systemImage: "square.stack.3d.up")
+            }
+            Button {
+                
+            } label: {
+                Label("Add to a Reading List", systemImage: "list.bullet.rectangle.portrait")
+            }
+            Divider()
+            Menu("Manage Book") {
+                Button {
+                    
+                } label: {
+                    Label("Edit", systemImage: "pencil")
+                }
+                Button(role: .destructive) {
+                    
+                } label: {
+                    Label("Delete", systemImage: "trash")
+                }
+            }
+        }
         
     }
 }
