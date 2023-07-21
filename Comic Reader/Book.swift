@@ -22,7 +22,6 @@ struct Book: Hashable, Codable, Identifiable {
     var downloaded: Bool?
 //    var creativeTeam: [CreativeTeam]?
 
-
     private var imageName: String
     var image: Image {
         Image(imageName)

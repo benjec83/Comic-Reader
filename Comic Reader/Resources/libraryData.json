@@ -106,3 +106,149 @@
         "description": ""
     }
 ]
+// MARK: - CodeAI Output
+import Foundation
+
+struct Comic: Codable {
+    let series: String
+    let title: String
+    let storyArc: String?
+    let volume: String
+    let id: Int
+    let issue: String
+    let favorite: Bool
+    let downloaded: Bool?
+    let read: Int?
+    let imageName: String
+    let publisherLogo: String
+    let description: String?
+}
+
+let json = """
+[
+{
+"series": "Superman: Son of Kal-El",
+"title": "Siege of Gamorra Part One",
+"storyArc": "Siege of Gamorra",
+"volume": "2017",
+"id": 1001,
+"issue": "14",
+"favorite": true,
+"imageName": "8613306-wwww",
+"publisherLogo": "DC_Comics_logo",
+"description": "Henry Bendix has threatened and manipulated and killed without consequence. Now, after a shocking coordinated attack on Earth’s heroes, it’s time for Superman, Jay, and the Revolutionaries to strike back. But first, Jay Nakamura must embrace his powers and become the hero Jon knows he can be."
+},
+{
+"series": "Superman: Son of Kal-El",
+"title": "Siege of Gamorra Finale",
+"storyArc": "Siege of Gamorra",
+"volume": "2017",
+"id": 1002,
+"issue": "15",
+"favorite": false,
+"imageName": "8651735-wwww",
+"publisherLogo": "DC_Comics_logo",
+"description": "This is it! The ultimate battle pitting Superman and the forces of The Truth against Bendix and his monstrous machinations has begun! But victory will be an uphill climb for our heroes as they lay siege to Gamorra. Plus...the smooch heard 'round the world."
+},
+{
+"series": "Superman: Son of Kal-El",
+"title": "Kal-El Returns, Chapter Two: Reunion",
+"storyArc": "Kal-El Returns",
+"volume": "2017",
+"id": 1003,
+"issue": "16",
+"favorite": false,
+"imageName": "8679845-large-1649158",
+"publisherLogo": "DC_Comics_logo",
+"description": "Father and son are at last reunited after the Warworld Saga ripped them apart…and you don’t need to have super-senses to know that this is a reunion well earned. As planet Earth becomes reacquainted with the rise of two Supermen, one man stands in their way. Lex Luthor sets his deadly machinations in motion as the march toward Action Comics #1050 continues!"
+},
+{
+"series": "Superman: Son of Kal-El",
+"title": "Kal-El Returns, Chapter Four: Unguarded",
+"storyArc": "Kal-El Returns",
+"volume": "2017",
+"id": 1004,
+"issue": "17",
+"favorite": false,
+"downloaded": true,
+"imageName": "8712277-superman-son-of-kal-el-17",
+"publisherLogo": "DC_Comics_logo",
+"description": "Superman and son are reunited...so why doesn't it feel so good? Could it be because of the Lexcorp automatons threatening the safety of Metropolis? I've got a bad feeling about this..."
+},
+{
+"series": "Superman: Son of Kal-El",
+"title": "Kal-El Returns, Chapter Six: Security",
+"storyArc": "Kal-El Returns",
+"volume": "2017",
+"id": 1005,
+"issue": "18",
+"favorite": false,
+"read": 99,
+"imageName":"8733035-3554c22d6e454e56aa5e95b33a044906c828",
+"publisherLogo": "DC_Comics_logo",
+"description": "With the landmark Action Comics #1050 just around the corner, prepare for the ultimate battle between Superman and Lex Luthor as Clark and Jon continue their intensive training. But will it be enough to overcome the mysterious new villain calling himself Red Sin?"
+},
+{
+"series": "Injustice: Gods Among Us",
+"title": "Chapter 1",
+"volume": "2013",
+"id": 1006,
+"issue": "1",
+"favorite": true,
+"imageName":"2811995-screen_shot_2013_01_15_at_10.04.41_am",
+"publisherLogo": "DC_Comics_logo",
+"description": "The Man of Steel's at a happy point in his life--he's got some good news to share with Batman. But tragic times are just around the corner, as one of Batman's deadliest foes is in Metropolis on a surprise visit!",
+},
+{
+"series": "Nightwing",
+"title": "Leaping Into the Light Part 2",
+"storyArc": "Leaping Into the Light",
+"volume":"2016",
+"id": 1007,
+"issue":"79",
+"favorite": true,
+"read": 100,
+"downloaded": true,
+"imageName":"nightwing79",
+"publisherLogo":"DC_Comics_logo",
+"description":"Dick Grayson has inherited Alfred’s fortune, a puppy, and a whole lot of questions. Who is Mayor Zucco, and what is her relation to the man who murdered Dick’s parents? What sinister plans does Blockbuster have for Blüdhaven? What kind of dog food is best for a three-legged puppy? To answer these questions, Dick’s going to need a little help from his friends-past and present."
+},
+{
+    "series":"Action Comics",
+    "title":"Invisible Mafia Part 6",
+    "storyArc":"Invisible Mafia",
+    "volume":"2016",
+    "id":1008,
+    "issue":"1006",
+    "favorite":false,
+    "imageName":"actionComics1006",
+    "publisherLogo":"DC_Comics_logo",
+    "description":"The Red Cloud sets her sights on someone close to Superman, but how can the Man of Steel stop a villain he can’t touch? As the invisible mafia controlling Metropolis’ underworld steps more into the light, its leader finally stands revealed with a secret that will have massive implications for Superman and Clark Kent!"
+},
+{
+"series": "We Are Robin",
+"title": "We Are... Robin, Part One",
+"storyArc": "We Are Robin",
+"volume": "2015",
+"id": 1009,
+"issue": "1",
+"favorite": false,
+"imageName": "weAreRobin01",
+"publisherLogo": "DC_Comics_logo"
+}
+]
+"""
+
+let jsonData = Data(json.utf8)
+
+do {
+    let comics = try JSONDecoder().decode([Comic].self, from: jsonData)
+    
+    for comic in comics {
+        print(comic.title)
+        print(comic.description ?? "")
+        print("-----")
+    }
+} catch {
+    print("Error decoding JSON: \(error)")
+}
