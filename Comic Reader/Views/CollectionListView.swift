@@ -114,7 +114,7 @@ func move(from source: IndexSet, to destination: Int) {
 
 struct CollectionListView_Previews: PreviewProvider {
     static var previews: some View {
-        CollectionListView(focus: "Focus", book: books[1], books: books)
+        CollectionListView(focus: "Focus", book: books[0], books: books)
     }
 }
 

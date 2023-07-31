@@ -26,6 +26,7 @@ struct BookSheetView: View {
 
 struct BookSheetView_Previews: PreviewProvider {
     static var previews: some View {
-        BookSheetView(book: books[1])
+        BookSheetView(book: books[0])
+            .environmentObject(ModelData())
     }
 }

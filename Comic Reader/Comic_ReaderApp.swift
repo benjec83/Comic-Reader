@@ -13,7 +13,7 @@ struct Comic_ReaderApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView(focus: "List View", book: books[1], books: books)
+            ContentView(focus: "List View", book: books[0], books: books)
                 .environmentObject(modelData)
         }
     }

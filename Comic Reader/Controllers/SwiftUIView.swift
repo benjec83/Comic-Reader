@@ -40,7 +40,7 @@ struct SwiftUIView: View {
 
 struct SwiftUIView_Previews: PreviewProvider {
     static var previews: some View {
-        SwiftUIView(focus: "Focus", book: books[1], books: books)
+        SwiftUIView(focus: "Focus", book: books[0], books: books)
             .environmentObject(ModelData())
     }
 }

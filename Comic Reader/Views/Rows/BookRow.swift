@@ -19,7 +19,7 @@ struct BookRow: View {
                 .scaledToFit()
                 .frame(width: 50, height: 50)
             VStack(alignment: .leading) {
-                Text("#" + book.issue + " - " + (book.title ?? ""))
+                Text("#" + "\(book.issue)" + " - " + (book.title ?? ""))
                 Text(book.series)
                     .font(.caption)
             }

@@ -20,7 +20,7 @@ struct HomeView: View {
     
     
     var currentlyReading: [Book] {
-        books.sorted(by: { $0.series ?? "" < $1.series ?? "" })
+        books.sorted(by: { $0.series < $1.series })
 //        books.filter { book in
 //            book.read ?? 0 >= 1
 //        }
@@ -30,7 +30,7 @@ struct HomeView: View {
     
     var favorites: [Book] {
         books.filter { book in
-            (book.favorite ?? false)
+            (book.favorite )
         }
     }
     
@@ -209,10 +209,9 @@ struct HomeView: View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView(recentlyAdded: books)
-    }
-}
-
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView()
+//    }
+//}
 

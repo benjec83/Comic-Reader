@@ -13,29 +13,29 @@ struct BookTileModel: View {
     var book: Book
 
     
-//    var readColor: Color {
-//        if book.read ?? 0 >= 100 {
-//            return Color.blue
-//        } else {
-//            return Color("NotTrueColor")
-//        }
-//    }
-//
-//    var favoriteColor: Color {
-//        if book.favorite == true {
-//            return Color.blue
-//        } else {
-//            return Color("NotTrueColor")
-//        }
-//    }
-//
-//    var downloadColor: Color {
-//        if book.downloaded == true {
-//            return Color.blue
-//        } else {
-//            return Color("NotTrueColor")
-//        }
-//    }
+    var readColor: Color {
+        if book.read ?? 0 >= 100 {
+            return Color.blue
+        } else {
+            return Color("NotTrueColor")
+        }
+    }
+
+    var favoriteColor: Color {
+        if book.favorite == true {
+            return Color.blue
+        } else {
+            return Color("NotTrueColor")
+        }
+    }
+
+    var downloadColor: Color {
+        if book.downloaded == true {
+            return Color.blue
+        } else {
+            return Color("NotTrueColor")
+        }
+    }
     
     var body: some View {
         
@@ -50,11 +50,11 @@ struct BookTileModel: View {
             
             VStack(alignment: .leading) {
                 
-                Text("#" + book.issue + " - " + (book.title ?? ""))
+                Text("#" + "\(book.issue)" + " - " + (book.title ?? ""))
                     .font(.subheadline)
                     .lineLimit(2)
                 
-                Text(book.series + " (" + book.volume + ")")
+                Text(book.series + " (" + "\(book.volume)" + ")")
                     .font(.caption2)
                     .lineLimit(1)
                 BookStatusBar(book: book)
@@ -74,34 +74,34 @@ struct BookTileModel: View {
                 Label("Read Now", systemImage: "magazine")
             }
             Button {
-                
+
             } label: {
                 Label("Mark As Read", systemImage: "checkmark.circle")
             }
             Button {
-                
+
             } label: {
                 Label("Add to Favorite", systemImage: "star")
             }
             Button {
-                
+
             } label: {
                 Label("Add to Reading Pile", systemImage: "square.stack.3d.up")
             }
             Button {
-                
+
             } label: {
                 Label("Add to a Reading List", systemImage: "list.bullet.rectangle.portrait")
             }
             Divider()
             Menu("Manage Book") {
                 Button {
-                    
+
                 } label: {
                     Label("Edit", systemImage: "pencil")
                 }
                 Button(role: .destructive) {
-                    
+
                 } label: {
                     Label("Delete", systemImage: "trash")
                 }
@@ -114,10 +114,7 @@ struct BookTileModel: View {
 
 struct BookTileViewModel_Previews: PreviewProvider {
     static var previews: some View {
-        //        Group {
         BookTileModel(book: books[0])
-        //            BookTileModel(book: books[1])
-        //            BookTileModel(book: books[5])
-        //        }
+
     }
 }

@@ -19,6 +19,6 @@ struct BookDetailsCreativesView: View {
 
 struct BookDetailsCreativesView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailsCreativesView(book: books[1])
+        BookDetailsCreativesView(book: books[0])
     }
 }

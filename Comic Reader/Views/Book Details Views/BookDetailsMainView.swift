@@ -35,7 +35,7 @@ struct BookDetailsMainView: View {
                     HStack {
                         BookMainDetails(book: book)
                     
-                        FavoriteButton(isSet: $modelData.books[bookIndex].favorite)
+//                        FavoriteButton(isSet: $modelData.books[bookIndex].favorite)
                     }
                     // Secondary Book Details
                     BookSecondaryDetails(book: book)
@@ -68,9 +68,9 @@ struct BookDetailsMainView: View {
 }
 
 
-//struct BookDetailsMainView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BookDetailsMainView(book: books[2])
-//    }
-//}
+struct BookDetailsMainView_Previews: PreviewProvider {
+    static var previews: some View {
+        BookDetailsMainView(book: books[2])
+    }
+}
 

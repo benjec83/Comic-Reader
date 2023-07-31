@@ -14,18 +14,16 @@ struct BookMainDetails: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Text("Title: " + (book.title ?? ""))
+                Text("#" + "\(book.issue)" + " - " + (book.title ?? ""))
                     .font(.body)
                     .fontWeight(.semibold)
                     .lineLimit(2)
-                Text("Issue: #" + book.issue)
+                Text(book.series + " (" + "\(book.volume)" + ")")
                     .font(.caption2)
                     .lineLimit(2)
-                Text("Series: " + book.series + " (" + book.volume + ")")
+                Text((book.storyArc ?? ""))
                     .font(.caption2)
-                    .lineLimit(2)
-                Text("Story Arc: " + (book.storyArc ?? ""))
-                    .font(.caption2)
+                    .fontWeight(.light)
                     .lineLimit(1)
                 
             }
@@ -242,7 +240,7 @@ struct BookDetailTabs: View {
                     Text("Collection")
                 }
         }
-        .navigationTitle("#" + book.issue + " - " + (book.title ?? book.series))
+        .navigationTitle("#" + "\(book.issue)" + " - " + (book.title ?? book.series))
         .navigationBarTitleDisplayMode(.inline)
         .navigationBarItems(trailing:
                                 HStack {

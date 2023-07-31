@@ -21,6 +21,6 @@ struct BookDetailsLibraryView: View {
 
 struct BookDetailsLibraryView_Previews: PreviewProvider {
     static var previews: some View {
-        BookDetailsLibraryView(book: books[1])
+        BookDetailsLibraryView(book: books[0])
     }
 }

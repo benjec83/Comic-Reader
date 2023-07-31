@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4A027692297B00AC001C4A24 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A027691297B00AC001C4A24 /* SwiftUIView.swift */; };
+		4A8B249C2A7721CB008AF066 /* BookEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B249B2A7721CB008AF066 /* BookEditView.swift */; };
 		4A97A3882973583B00BD5FCA /* BookDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A97A3872973583B00BD5FCA /* BookDetails.swift */; };
 		4AE0CCB129724A520092AD09 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0CCB029724A520092AD09 /* DataLoader.swift */; };
 		4AE0CCB529725FB40092AD09 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0CCB429725FB40092AD09 /* FavoriteButton.swift */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		4A027691297B00AC001C4A24 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		4A8B249B2A7721CB008AF066 /* BookEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEditView.swift; sourceTree = "<group>"; };
 		4A97A3872973583B00BD5FCA /* BookDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetails.swift; sourceTree = "<group>"; };
 		4AE0CCB029724A520092AD09 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		4AE0CCB429725FB40092AD09 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
@@ -142,6 +144,7 @@
 				ED2B4CC5296A9243005A4FB7 /* Rows */,
 				ED112030295FE6560065672A /* Book Details Views */,
 				4AE967C8296E3435007D666A /* CollectionListView.swift */,
+				4A8B249B2A7721CB008AF066 /* BookEditView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,6 +338,7 @@
 				ED2B4CC4296A8790005A4FB7 /* FilterSheetView.swift in Sources */,
 				ED2C9ACD2961DC15006027C1 /* BookSheetView.swift in Sources */,
 				4A97A3882973583B00BD5FCA /* BookDetails.swift in Sources */,
+				4A8B249C2A7721CB008AF066 /* BookEditView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

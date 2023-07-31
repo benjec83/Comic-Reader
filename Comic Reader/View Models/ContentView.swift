@@ -30,42 +30,42 @@ struct ContentView: View {
                 }
                 Section("Library", content: {
                     NavigationLink {
-                        LibraryView(focus: "Library", book: books[1], books: books)
+                        LibraryView(focus: "Library", book: books[0], books: books)
                     } label: {
                         Label("All Books", systemImage: "books.vertical")
                     }
                     NavigationLink {
-                        CollectionListView(focus: "List View", book: books[1], books: books)
+                        CollectionListView(focus: "List View", book: books[0], books: books)
                     } label: {
                         Label("List View", systemImage: "list.bullet")
                     }
                     NavigationLink {
-                        LibraryView(focus: "Reading Pile", book: books[1], books: books)
+                        LibraryView(focus: "Reading Pile", book: books[0], books: books)
                     } label: {
                         Label("Reading Pile", systemImage: "square.stack.3d.up")
                     }
                     NavigationLink {
-                        LibraryView(focus: "Recently Added", book: books[1], books: books)
+                        LibraryView(focus: "Recently Added", book: books[0], books: books)
                     } label: {
                         Label("Recently Added", systemImage: "clock")
                     }
                     NavigationLink {
-                        LibraryView(focus: "Favorites", book: books[1], books: books)
+                        LibraryView(focus: "Favorites", book: books[0], books: books)
                     } label: {
                         Label("Favorites", systemImage: "star")
                     }
                     NavigationLink {
-                        LibraryView(focus: "Downloaded", book: books[1], books: books)
+                        LibraryView(focus: "Downloaded", book: books[0], books: books)
                     } label: {
                         Label("Downloaded", systemImage: "square.and.arrow.down")
                     }
                     NavigationLink {
-                        LibraryView(focus: "Story Arcs", book: books[1], books: books)
+                        LibraryView(focus: "Story Arcs", book: books[0], books: books)
                     } label: {
                         Label("Story Arcs", systemImage: "square.fill.text.grid.1x2")
                     }
                     NavigationLink {
-                        LibraryView(focus: "Events", book: books[1], books: books)
+                        LibraryView(focus: "Events", book: books[0], books: books)
                     } label: {
                         Label("Events", systemImage: "text.badge.star")
                     }
@@ -106,7 +106,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(focus: "Focus", book: books[1], books: books)
+        ContentView(focus: "Focus", book: books[0], books: books)
             .environmentObject(ModelData())
         //            .preferredColorScheme(.dark)
 
