@@ -10,6 +10,7 @@
 		4A027692297B00AC001C4A24 /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A027691297B00AC001C4A24 /* SwiftUIView.swift */; };
 		4A8B249C2A7721CB008AF066 /* BookEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A8B249B2A7721CB008AF066 /* BookEditView.swift */; };
 		4A97A3882973583B00BD5FCA /* BookDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4A97A3872973583B00BD5FCA /* BookDetails.swift */; };
+		4ACFA7D32A99332400E6D9B1 /* ComicReaderModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4ACFA7D12A99332400E6D9B1 /* ComicReaderModel.xcdatamodeld */; };
 		4AE0CCB129724A520092AD09 /* DataLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0CCB029724A520092AD09 /* DataLoader.swift */; };
 		4AE0CCB529725FB40092AD09 /* FavoriteButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE0CCB429725FB40092AD09 /* FavoriteButton.swift */; };
 		4AE967C9296E3435007D666A /* CollectionListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AE967C8296E3435007D666A /* CollectionListView.swift */; };
@@ -24,7 +25,7 @@
 		ED2C9ACD2961DC15006027C1 /* BookSheetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2C9ACC2961DC15006027C1 /* BookSheetView.swift */; };
 		ED7AFD152963AE4900A538FE /* Library.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7AFD142963AE4900A538FE /* Library.swift */; };
 		EDA04649295EAED2006291E8 /* libraryData.json in Resources */ = {isa = PBXBuildFile; fileRef = EDA04648295EAED2006291E8 /* libraryData.json */; };
-		EDA0464B295EAF3F006291E8 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0464A295EAF3F006291E8 /* ModelData.swift */; };
+		EDA0464B295EAF3F006291E8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0464A295EAF3F006291E8 /* DataManager.swift */; };
 		EDA0464E295EB247006291E8 /* BookRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0464D295EB247006291E8 /* BookRow.swift */; };
 		EDA0465D295F6552006291E8 /* PublisherLogo.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA0465C295F6552006291E8 /* PublisherLogo.swift */; };
 		EDA04663295FC09F006291E8 /* BookDetailsCreativesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDA04662295FC09F006291E8 /* BookDetailsCreativesView.swift */; };
@@ -46,6 +47,7 @@
 		4A027691297B00AC001C4A24 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		4A8B249B2A7721CB008AF066 /* BookEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEditView.swift; sourceTree = "<group>"; };
 		4A97A3872973583B00BD5FCA /* BookDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetails.swift; sourceTree = "<group>"; };
+		4ACFA7D22A99332400E6D9B1 /* ComicReaderModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ComicReaderModel.xcdatamodel; sourceTree = "<group>"; };
 		4AE0CCB029724A520092AD09 /* DataLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataLoader.swift; sourceTree = "<group>"; };
 		4AE0CCB429725FB40092AD09 /* FavoriteButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteButton.swift; sourceTree = "<group>"; };
 		4AE967C8296E3435007D666A /* CollectionListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionListView.swift; sourceTree = "<group>"; };
@@ -61,7 +63,7 @@
 		ED7AFD142963AE4900A538FE /* Library.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Library.swift; sourceTree = "<group>"; };
 		ED7AFD162963C31700A538FE /* Comic-Reader-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Comic-Reader-Info.plist"; sourceTree = SOURCE_ROOT; };
 		EDA04648295EAED2006291E8 /* libraryData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = libraryData.json; sourceTree = "<group>"; };
-		EDA0464A295EAF3F006291E8 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		EDA0464A295EAF3F006291E8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		EDA0464D295EB247006291E8 /* BookRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookRow.swift; sourceTree = "<group>"; };
 		EDA0465C295F6552006291E8 /* PublisherLogo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublisherLogo.swift; sourceTree = "<group>"; };
 		EDA04662295FC09F006291E8 /* BookDetailsCreativesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookDetailsCreativesView.swift; sourceTree = "<group>"; };
@@ -96,6 +98,14 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4A8B24E32A7969C4008AF066 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4ACFA7D12A99332400E6D9B1 /* ComicReaderModel.xcdatamodeld */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		4AD33B45296CF2B400F6314A /* Helpers */ = {
@@ -181,6 +191,7 @@
 		EDC90D41295E77D100E2339E /* Comic Reader */ = {
 			isa = PBXGroup;
 			children = (
+				4A8B24E32A7969C4008AF066 /* Data */,
 				4AD33B45296CF2B400F6314A /* Helpers */,
 				ED7AFD162963C31700A538FE /* Comic-Reader-Info.plist */,
 				ED2C9ACB2961DBE8006027C1 /* Sheets */,
@@ -218,7 +229,7 @@
 				EDC90D50295E9B6100E2339E /* CoverImage.swift */,
 				EDA0465C295F6552006291E8 /* PublisherLogo.swift */,
 				EDC90D54295EA8C600E2339E /* Book.swift */,
-				EDA0464A295EAF3F006291E8 /* ModelData.swift */,
+				EDA0464A295EAF3F006291E8 /* DataManager.swift */,
 				ED112033295FE8420065672A /* CreativesModel.swift */,
 				ED112035295FED7F0065672A /* PeopleModel.swift */,
 				ED7AFD142963AE4900A538FE /* Library.swift */,
@@ -327,11 +338,12 @@
 				EDA0464E295EB247006291E8 /* BookRow.swift in Sources */,
 				4AE968122971F11B007D666A /* ReadingList.swift in Sources */,
 				4AF00CD429732B9600E24FE7 /* BookStatusTile.swift in Sources */,
+				4ACFA7D32A99332400E6D9B1 /* ComicReaderModel.xcdatamodeld in Sources */,
 				ED112034295FE8420065672A /* CreativesModel.swift in Sources */,
 				EDA669BA29621F610069176E /* LibraryView.swift in Sources */,
 				EDA669BC29621F6B0069176E /* SearchView.swift in Sources */,
 				EDC90D5C295EAC5900E2339E /* BookTileModel.swift in Sources */,
-				EDA0464B295EAF3F006291E8 /* ModelData.swift in Sources */,
+				EDA0464B295EAF3F006291E8 /* DataManager.swift in Sources */,
 				ED112036295FED7F0065672A /* PeopleModel.swift in Sources */,
 				4A027692297B00AC001C4A24 /* SwiftUIView.swift in Sources */,
 				EDA04663295FC09F006291E8 /* BookDetailsCreativesView.swift in Sources */,
@@ -542,6 +554,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4ACFA7D12A99332400E6D9B1 /* ComicReaderModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4ACFA7D22A99332400E6D9B1 /* ComicReaderModel.xcdatamodel */,
+			);
+			currentVersion = 4ACFA7D22A99332400E6D9B1 /* ComicReaderModel.xcdatamodel */;
+			path = ComicReaderModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = EDC90D37295E77D000E2339E /* Project object */;
 }

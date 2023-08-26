@@ -9,6 +9,10 @@ import SwiftUI
 
 
 struct SearchView: View {
+    
+    @EnvironmentObject var manager: DataManager
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) private var bookItems: FetchedResults<Book>
 
     @State var searchQuery = ""
     
