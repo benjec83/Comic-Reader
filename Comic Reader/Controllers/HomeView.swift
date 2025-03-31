@@ -175,7 +175,7 @@ struct HomeView: View {
                     Text("Reading Lists")
                     Spacer()
                     Button{
-                        print("Readling Lists More pressed")
+                        print("Reading Lists More pressed")
                     } label: {
                         Label("", systemImage: "chevron.right")
                     }
