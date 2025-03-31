@@ -56,6 +56,7 @@
 
 /* Begin PBXFileReference section */
 		4A027691297B00AC001C4A24 /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		4A1006422D9B633500D39585 /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
 		4A8B249B2A7721CB008AF066 /* BookEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookEditView.swift; sourceTree = "<group>"; };
 		4A97A3872973583B00BD5FCA /* BookDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookDetails.swift; sourceTree = "<group>"; };
 		4AC4785E2D9B35D5002767B4 /* BookLocations+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BookLocations+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -211,6 +212,7 @@
 		EDC90D36295E77D000E2339E = {
 			isa = PBXGroup;
 			children = (
+				4A1006422D9B633500D39585 /* .gitignore */,
 				EDC90D41295E77D100E2339E /* Comic Reader */,
 				EDC90D40295E77D100E2339E /* Products */,
 				4A7413F7296D19B000BD16BC /* Frameworks */,
