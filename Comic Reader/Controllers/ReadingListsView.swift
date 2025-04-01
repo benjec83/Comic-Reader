@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct ReadingListsView: View {
+    
+    @EnvironmentObject var manager: DataManager
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) private var bookItems: FetchedResults<Book>
+    
     var body: some View {
         Text("Reading List View")
             .navigationTitle("Reading Lists")

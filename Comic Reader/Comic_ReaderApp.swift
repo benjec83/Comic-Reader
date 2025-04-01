@@ -9,12 +9,13 @@ import SwiftUI
 
 @main
 struct Comic_ReaderApp: App {
-    @StateObject private var modelData = ModelData()
+    @StateObject private var manager: DataManager = DataManager()
     
     var body: some Scene {
         WindowGroup {
-            ContentView(focus: "List View", book: books[0], books: books)
-                .environmentObject(modelData)
+            ContentView(focus: "List View", book: bookitems[0], books: books)
+                .environmentObject(manager)
+                .environmentObject(\.managedObjectContext, manager.container.viewContext)
         }
     }
 }

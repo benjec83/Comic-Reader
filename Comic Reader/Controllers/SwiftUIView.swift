@@ -9,6 +9,10 @@ import SwiftUI
 
 struct SwiftUIView: View {
     
+    @EnvironmentObject var manager: DataManager
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) private var bookItems: FetchedResults<Book>
+    
     @EnvironmentObject var modelData: ModelData
     
     

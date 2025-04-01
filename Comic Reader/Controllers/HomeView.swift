@@ -9,6 +9,11 @@ import SwiftUI
 import UIKit
 
 struct HomeView: View {
+    
+    @EnvironmentObject var manager: DataManager
+    @Environment(\.managedObjectContext) private var viewContext
+    @FetchRequest(sortDescriptors: []) private var bookItems: FetchedResults<Book>
+    
     @Environment(\.isSearching) var isSearching
     
     var library = ComicLibrary()

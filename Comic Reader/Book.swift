@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 
-struct Book: Hashable, Codable, Identifiable {
+struct BookItem: Hashable, Codable, Identifiable {
     
     var id: Int
     var series: String
@@ -35,8 +35,8 @@ struct Book: Hashable, Codable, Identifiable {
     
 }
 
-extension Book {
-    static let sampleData: [Book] =
+extension BookItem {
+    static let sampleData: [BookItem] =
     [
     Book(id: 1001,
          series: "Superman: Son of Kal-El",

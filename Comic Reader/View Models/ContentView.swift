@@ -19,6 +19,10 @@ struct ContentView: View {
         
     
     var body: some View {
+        @EnvironmentObject var manager: DataManager
+        @Environment(\.managedObjectContext) private var viewContext
+        @FetchRequest(sortDescriptors: []) private var bookItems: FetchedResults<Book>
+        
         NavigationView {
             List {
                 
